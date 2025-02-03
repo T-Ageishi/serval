@@ -5,7 +5,7 @@ import Text from "@/components/atoms/text";
 import Chips, { ChipProps } from "@/components/atoms/chips";
 import styles from "./index.module.css";
 
-export default function ProjectsSearch({}: ProjectsSearchProps) {
+export default function ProjectsSearch() {
 	const [keyword, setKeyword] = useState<string>("");
 	const [selectedChips, setSelectedChips] = useState<number[]>([]);
 
@@ -38,5 +38,3 @@ export default function ProjectsSearch({}: ProjectsSearchProps) {
 		</section>
 	);
 }
-
-type ProjectsSearchProps = {};
