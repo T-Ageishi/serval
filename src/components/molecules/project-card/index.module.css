@@ -1,0 +1,28 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card__title-inner {
+  white-space: nowrap;
+}
+
+.card__duration {
+  font-size: var(--font-sm);
+  color: rgb(106 114 130);
+}
+
+.card__actions {
+  margin-top: auto;
+}
+
+.card__chips {
+  margin-top: auto;
+}

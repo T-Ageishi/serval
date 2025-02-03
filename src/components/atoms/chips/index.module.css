@@ -1,0 +1,28 @@
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+}
+
+.chip {
+  font-size: var(--font-sm);
+  display: block;
+  padding: 2px 8px;
+  user-select: none;
+  border: solid 1px var(--color-outline-variant);
+  border-radius: 4px;
+
+  & label {
+    cursor: pointer;
+  }
+
+  &:has(.chip__checkbox:checked) {
+    color: #ffffff;
+    border: solid 1px rgb(57 73 171);
+    background-color: rgb(57 73 171);
+  }
+}
+
+.chip__checkbox {
+  display: none;
+}
