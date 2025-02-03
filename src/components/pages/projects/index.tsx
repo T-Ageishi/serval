@@ -3,7 +3,8 @@ import styles from "./index.module.css";
 import MainTemplate from "@/components/templates/main";
 import ProjectsSearch from "@/components/organisms/projects-search";
 
-export default function ListPage() {
+// @@todo change component's name
+export default function ProjectsPage() {
 	return (
 		<MainTemplate heroLabel={"プロジェクト一覧"}>
 			<ProjectsSearch />
