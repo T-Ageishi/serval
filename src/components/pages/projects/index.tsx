@@ -3,7 +3,7 @@ import styles from "./index.module.css";
 import MainTemplate from "@/components/templates/main";
 import ProjectsSearch from "@/components/organisms/projects-search";
 
-export default function ListPage({}: ListPageProps) {
+export default function ListPage() {
 	return (
 		<MainTemplate heroLabel={"プロジェクト一覧"}>
 			<ProjectsSearch />
@@ -13,5 +13,3 @@ export default function ListPage({}: ListPageProps) {
 		</MainTemplate>
 	);
 }
-
-type ListPageProps = {};
