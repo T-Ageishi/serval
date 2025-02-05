@@ -24,7 +24,7 @@ export default function ProjectsSearch({
 				prependIcon={"search"}
 				placeholder={"プロジェクトを検索"}
 			/>
-			<div className={styles["chips-container"]}>
+			<div className={styles["search__chips-container"]}>
 				<Chips chipPropsList={props} />
 			</div>
 		</section>

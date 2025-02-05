@@ -1,7 +1,7 @@
-.chips-container {
-  margin-top: 8px;
-}
-
 .search__text {
   font-size: 1rem;
+}
+
+.search__chips-container {
+  margin-top: 8px;
 }
