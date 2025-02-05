@@ -4,7 +4,7 @@ import ProjectsSearch from "@/components/organisms/projects-search";
 import Hero from "@/components/atoms/hero";
 
 // @@todo change component's name
-export default function ProjectsPage() {
+export default function Projects() {
 	return (
 		<>
 			<section style={{ paddingBottom: "24px" }}>
