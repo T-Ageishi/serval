@@ -9,9 +9,7 @@ export default function MainTemplate() {
 		<div className={styles["container"]}>
 			<Header />
 			<main className={styles["body"]}>
-				<section className={styles["body__contents"]}>
-					<Outlet />
-				</section>
+				<Outlet />
 			</main>
 			<Footer />
 		</div>
