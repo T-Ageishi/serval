@@ -2,22 +2,25 @@ import NewProjectCard from "@/components/molecules/new-project-card";
 import styles from "./index.module.css";
 import ProjectsSearch from "@/components/organisms/projects-search";
 import WithHeroTemplate from "@/components/templates/with-hero";
-import { ChangeEventHandler, useState } from "react";
+import { ChangeEventHandler } from "react";
+import {
+	selectKeyword,
+	updateKeyword,
+	addCategory,
+	removeCategory,
+} from "@/features/search/search-slice.ts";
+import { useDispatch } from "react-redux";
+import { useAppSelector } from "@/hooks/use-app-selector.ts";
 
 export default function Projects() {
-	const [keyword, setKeyword] = useState<string>("");
-	const [selectedChips, setSelectedChips] = useState<number[]>([]);
-
-	const onChangeKeyword: ChangeEventHandler<HTMLInputElement> = (e) => {
-		setKeyword(e.target.value);
-	};
+	const keyword = useAppSelector(selectKeyword);
+	const dispatch = useDispatch();
 
 	const onChangeChips: ChangeEventHandler<HTMLInputElement> = (e) => {
-		const value = Number(e.currentTarget.value);
 		if (e.currentTarget.checked) {
-			setSelectedChips([...selectedChips, value]);
+			addCategory(Number(e.currentTarget.value));
 		} else {
-			setSelectedChips(selectedChips.filter((v) => v !== value));
+			removeCategory(Number(e.currentTarget.value));
 		}
 	};
 
@@ -25,7 +28,7 @@ export default function Projects() {
 		<WithHeroTemplate heroLabel={"プロジェクト一覧"}>
 			<ProjectsSearch
 				keyword={keyword}
-				onChangeKeyword={onChangeKeyword}
+				onChangeKeyword={(e) => dispatch(updateKeyword(e.target.value))}
 				onChangeChips={onChangeChips}
 			/>
 			<section className={styles["page__cards"]}>
