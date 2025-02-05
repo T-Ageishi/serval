@@ -20,6 +20,7 @@ export default function ProjectsSearch({
 			<Text
 				value={keyword}
 				onChange={onChangeKeyword}
+				className={styles["search__text"]}
 				prependIcon={"search"}
 				placeholder={"プロジェクトを検索"}
 			/>
