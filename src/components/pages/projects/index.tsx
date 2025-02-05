@@ -6,13 +6,11 @@ import WithHeroTemplate from "@/components/templates/with-hero";
 // @@todo change component's name
 export default function Projects() {
 	return (
-		<>
-			<WithHeroTemplate heroLabel={"プロジェクト一覧"}>
-				<ProjectsSearch />
-				<section className={styles["page__cards"]}>
-					<NewProjectCard />
-				</section>
-			</WithHeroTemplate>
-		</>
+		<WithHeroTemplate heroLabel={"プロジェクト一覧"}>
+			<ProjectsSearch />
+			<section className={styles["page__cards"]}>
+				<NewProjectCard />
+			</section>
+		</WithHeroTemplate>
 	);
 }
