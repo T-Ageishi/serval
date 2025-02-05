@@ -3,7 +3,6 @@ import styles from "./index.module.css";
 import ProjectsSearch from "@/components/organisms/projects-search";
 import WithHeroTemplate from "@/components/templates/with-hero";
 
-// @@todo change component's name
 export default function Projects() {
 	return (
 		<WithHeroTemplate heroLabel={"プロジェクト一覧"}>
