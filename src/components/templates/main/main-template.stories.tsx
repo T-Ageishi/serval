@@ -13,10 +13,6 @@ export default {
 type Story = StoryObj<typeof MainTemplate>;
 
 export const Default: Story = {
-	args: {
-		heroLabel: "プロジェクト一覧",
-		children: <div>メインのコンテンツ</div>,
-	},
 	parameters: {
 		...Projects.parameters,
 	},

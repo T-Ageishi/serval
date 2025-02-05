@@ -1,16 +1,19 @@
 import NewProjectCard from "@/components/molecules/new-project-card";
 import styles from "./index.module.css";
-import MainTemplate from "@/components/templates/main";
 import ProjectsSearch from "@/components/organisms/projects-search";
+import Hero from "@/components/atoms/hero";
 
 // @@todo change component's name
 export default function ProjectsPage() {
 	return (
-		<MainTemplate heroLabel={"プロジェクト一覧"}>
+		<>
+			<section style={{ paddingBottom: "24px" }}>
+				<Hero label={"プロジェクト一覧"} />
+			</section>
 			<ProjectsSearch />
 			<section className={styles["page__cards"]}>
 				<NewProjectCard />
 			</section>
-		</MainTemplate>
+		</>
 	);
 }
