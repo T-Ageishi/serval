@@ -10,6 +10,6 @@ type Story = StoryObj<typeof Hero>;
 
 export const Default: Story = {
 	args: {
-		label: "プロジェクト一覧",
+		children: "プロジェクト一覧",
 	},
 };

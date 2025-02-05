@@ -8,7 +8,7 @@ export default function Projects() {
 	return (
 		<>
 			<section style={{ paddingBottom: "24px" }}>
-				<Hero label={"プロジェクト一覧"} />
+				<Hero>プロジェクト一覧</Hero>
 			</section>
 			<ProjectsSearch />
 			<section className={styles["page__cards"]}>
