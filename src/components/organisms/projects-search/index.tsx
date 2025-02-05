@@ -1,25 +1,15 @@
 "use client";
 
-import { ChangeEventHandler, useState } from "react";
+import { ChangeEventHandler } from "react";
 import Text from "@/components/atoms/text";
 import Chips, { ChipProps } from "@/components/atoms/chips";
 import styles from "./index.module.css";
 
-export default function ProjectsSearch() {
-	const [keyword, setKeyword] = useState<string>("");
-	const [selectedChips, setSelectedChips] = useState<number[]>([]);
-
-	const onChangeText: ChangeEventHandler<HTMLInputElement> = (e) => {
-		setKeyword(e.target.value);
-	};
-	const onChangeChips: ChangeEventHandler<HTMLInputElement> = (e) => {
-		const value = Number(e.currentTarget.value);
-		if (e.currentTarget.checked) {
-			setSelectedChips([...selectedChips, value]);
-		} else {
-			setSelectedChips(selectedChips.filter((v) => v !== value));
-		}
-	};
+export default function ProjectsSearch({
+	keyword,
+	onChangeKeyword,
+	onChangeChips,
+}: ProjectsSearchProps) {
 	const props: ChipProps[] = [
 		{ label: "その他", value: -99999, onChange: onChangeChips },
 	];
@@ -28,7 +18,7 @@ export default function ProjectsSearch() {
 		<section>
 			<Text
 				value={keyword}
-				onChange={onChangeText}
+				onChange={onChangeKeyword}
 				prependIcon={"search"}
 				placeholder={"プロジェクトを検索"}
 			/>
@@ -38,3 +28,9 @@ export default function ProjectsSearch() {
 		</section>
 	);
 }
+
+type ProjectsSearchProps = {
+	keyword: string;
+	onChangeKeyword: ChangeEventHandler<HTMLInputElement>;
+	onChangeChips: ChangeEventHandler<HTMLInputElement>;
+};
