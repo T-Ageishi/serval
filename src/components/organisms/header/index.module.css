@@ -17,3 +17,7 @@
   padding: var(--app-padding);
   column-gap: 32px;
 }
+
+.header__theme-button {
+  margin-left: auto;
+}
