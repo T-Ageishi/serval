@@ -1,4 +1,3 @@
-import Home from "@/components/pages/home";
 import MainTemplate from "@/components/templates/main/index";
 import type { Meta, StoryObj } from "@storybook/react";
 import { reactRouterParameters } from "storybook-addon-remix-react-router";
@@ -17,10 +16,7 @@ export const Default: Story = {
 	parameters: {
 		parameters: {
 			reactRouter: reactRouterParameters({
-				routing: {
-					path: "/",
-					handle: <Home />,
-				},
+				location: { path: "/" },
 			}),
 		},
 	},

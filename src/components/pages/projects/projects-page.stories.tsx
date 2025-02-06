@@ -1,18 +1,32 @@
-import { Projects } from "@/components/molecules/navigation/navigation.stories";
-import ProjectsPage from "@/components/pages/projects/index";
+import { App } from "@/app.tsx";
 import type { Meta, StoryObj } from "@storybook/react";
+import {
+	reactRouterOutlet,
+	reactRouterParameters,
+} from "storybook-addon-remix-react-router";
 
 export default {
 	title: "Pages/Projects",
-	component: ProjectsPage,
+	component: App,
 	parameters: {
 		layout: "fullscreen",
 	},
-} satisfies Meta<typeof Projects>;
+} satisfies Meta<typeof App>;
 
-type Story = StoryObj<typeof Projects>;
+type Story = StoryObj<typeof App>;
 export const Default: Story = {
 	parameters: {
-		...Projects.parameters,
+		reactRouter: reactRouterParameters({
+			location: { path: "/" },
+			routing: reactRouterOutlet({ path: "/" }),
+		}),
+	},
+};
+export const Projects: Story = {
+	parameters: {
+		reactRouter: reactRouterParameters({
+			location: { path: "/projects" },
+			routing: reactRouterOutlet({ path: "/projects" }),
+		}),
 	},
 };

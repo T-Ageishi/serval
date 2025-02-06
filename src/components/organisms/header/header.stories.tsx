@@ -14,9 +14,7 @@ type Story = StoryObj<typeof Header>;
 export const Default: Story = {
 	parameters: {
 		reactRouter: reactRouterParameters({
-			routing: {
-				path: "/",
-			},
+			location: { path: "/" },
 		}),
 	},
 };
@@ -24,9 +22,7 @@ export const Default: Story = {
 export const Projects: Story = {
 	parameters: {
 		reactRouter: reactRouterParameters({
-			routing: {
-				path: "/projects",
-			},
+			location: { path: "/projects" },
 		}),
 	},
 };

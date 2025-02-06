@@ -1,5 +1,4 @@
 import Navigation from ".";
-import ProjectsPage from "@/components/pages/projects/index";
 import type { Meta, StoryObj } from "@storybook/react";
 import { reactRouterParameters } from "storybook-addon-remix-react-router";
 
@@ -25,9 +24,8 @@ export const Home: Story = {
 export const Projects: Story = {
 	parameters: {
 		reactRouter: reactRouterParameters({
-			routing: {
+			location: {
 				path: "/projects",
-				handle: <ProjectsPage />,
 			},
 		}),
 	},

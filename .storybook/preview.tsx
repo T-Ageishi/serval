@@ -3,7 +3,10 @@ import "@/index.css";
 import { store } from "@/store.ts";
 import type { Preview } from "@storybook/react";
 import { Provider } from "react-redux";
-import { withRouter } from "storybook-addon-remix-react-router";
+import {
+	reactRouterParameters,
+	withRouter,
+} from "storybook-addon-remix-react-router";
 
 const preview: Preview = {
 	decorators: [
@@ -28,6 +31,12 @@ const preview: Preview = {
 				order: ["Atoms", "Molecules", "Organisms", "Templates", "Pages"],
 			},
 		},
+		reactRouter: reactRouterParameters({
+			routing: [
+				{ path: "/", useStoryElement: true },
+				{ path: "/projects", useStoryElement: true },
+			],
+		}),
 	},
 };
 
