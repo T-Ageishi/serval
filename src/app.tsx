@@ -1,4 +1,4 @@
-import { Home } from "@/components/pages/home";
+import Home from "@/components/pages/home";
 import Projects from "@/components/pages/projects";
 import MainTemplate from "@/components/templates/main";
 import { useAppSelector } from "@/redux/hooks/use-app-selector.ts";
