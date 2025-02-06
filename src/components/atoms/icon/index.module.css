@@ -3,5 +3,9 @@
 }
 
 .icon--lg {
+  font-size: 1.5rem;
+}
+
+.icon--xl {
   font-size: 2rem;
 }

@@ -1,0 +1,23 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+
+  &:hover {
+    background-color: var(--color-surface);
+  }
+}
+
+.button--md {
+  width: 48px;
+  height: 48px;
+}
+
+.button--icon {
+  border-radius: 50%;
+  outline: solid 1px var(--color-outline);
+}

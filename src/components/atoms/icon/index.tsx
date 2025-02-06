@@ -15,6 +15,7 @@ export default function Icon({
 				{
 					[styles["icon--md"]]: size === "md",
 					[styles["icon--lg"]]: size === "lg",
+					[styles["icon--xl"]]: size === "xl",
 				},
 				className,
 			])}
@@ -27,5 +28,5 @@ export default function Icon({
 
 type IconProps = ComponentProps<"span"> & {
 	name: string;
-	size?: "md" | "lg";
+	size?: "md" | "lg" | "xl";
 };
