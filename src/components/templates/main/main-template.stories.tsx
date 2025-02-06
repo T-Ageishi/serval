@@ -1,6 +1,7 @@
-import { Projects } from "@/components/molecules/navigation/navigation.stories";
+import Home from "@/components/pages/home";
 import MainTemplate from "@/components/templates/main/index";
 import type { Meta, StoryObj } from "@storybook/react";
+import { reactRouterParameters } from "storybook-addon-remix-react-router";
 
 export default {
 	title: "Templates/MainTemplate",
@@ -14,6 +15,13 @@ type Story = StoryObj<typeof MainTemplate>;
 
 export const Default: Story = {
 	parameters: {
-		...Projects.parameters,
+		parameters: {
+			reactRouter: reactRouterParameters({
+				routing: {
+					path: "/",
+					handle: <Home />,
+				},
+			}),
+		},
 	},
 };
