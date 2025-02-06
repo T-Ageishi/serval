@@ -9,9 +9,9 @@ import {
 	updateKeyword,
 	addCategory,
 	removeCategory,
-} from "@/features/search/search-slice.ts";
+} from "@/redux/slices/search-slice.ts";
 import { useDispatch } from "react-redux";
-import { useAppSelector } from "@/hooks/use-app-selector.ts";
+import { useAppSelector } from "@/redux/hooks/use-app-selector.ts";
 
 export default function ProjectsSearch() {
 	const [categories, setCategories] = useState<Category[]>([]);
