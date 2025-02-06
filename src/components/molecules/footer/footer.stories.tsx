@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import Footer from "@/components/molecules/footer/index";
+import type { Meta, StoryObj } from "@storybook/react";
 
 export default {
 	title: "Molecules/Footer",

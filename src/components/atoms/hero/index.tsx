@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
-import { ComponentProps, ReactNode } from "react";
 import { clsx } from "clsx";
+import { ComponentProps, ReactNode } from "react";
 
 export default function Hero({ className, children, ...props }: HeroProps) {
 	return (

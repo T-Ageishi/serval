@@ -1,5 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "@/store.ts";
+import { createSlice } from "@reduxjs/toolkit";
 
 export const themeSlice = createSlice({
 	name: "theme",

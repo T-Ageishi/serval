@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import Card from "@/components/atoms/card/index";
+import type { Meta, StoryObj } from "@storybook/react";
 
 export default {
 	title: "Atoms/Card",

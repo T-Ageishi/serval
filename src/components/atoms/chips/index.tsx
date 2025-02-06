@@ -1,5 +1,5 @@
-import { ComponentProps, ReactNode } from "react";
 import styles from "./index.module.css";
+import { ComponentProps, ReactNode } from "react";
 
 export default function Chips({
 	chipPropsList = [],

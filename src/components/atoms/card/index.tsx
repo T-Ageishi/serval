@@ -1,6 +1,6 @@
-import { ComponentProps, ReactNode } from "react";
 import styles from "./index.module.css";
 import { clsx } from "clsx";
+import { ComponentProps, ReactNode } from "react";
 
 export default function Card({
 	children,

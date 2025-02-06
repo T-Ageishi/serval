@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import ProjectsSearch from "@/components/organisms/projects-search/index";
+import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 
 export default {

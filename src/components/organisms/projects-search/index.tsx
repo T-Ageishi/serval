@@ -1,17 +1,17 @@
 "use client";
 
-import { ChangeEvent, useEffect, useMemo, useState } from "react";
-import Text from "@/components/atoms/text";
-import Chips, { ChipProps } from "@/components/atoms/chips";
 import styles from "./index.module.css";
+import Chips, { ChipProps } from "@/components/atoms/chips";
+import Text from "@/components/atoms/text";
+import { useAppSelector } from "@/redux/hooks/use-app-selector.ts";
 import {
 	selectKeyword,
 	updateKeyword,
 	addCategory,
 	removeCategory,
 } from "@/redux/slices/search-slice.ts";
+import { ChangeEvent, useEffect, useMemo, useState } from "react";
 import { useDispatch } from "react-redux";
-import { useAppSelector } from "@/redux/hooks/use-app-selector.ts";
 
 export default function ProjectsSearch() {
 	const [categories, setCategories] = useState<Category[]>([]);

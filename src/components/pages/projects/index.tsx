@@ -1,5 +1,5 @@
-import NewProjectCard from "@/components/molecules/new-project-card";
 import styles from "./index.module.css";
+import NewProjectCard from "@/components/molecules/new-project-card";
 import ProjectsSearch from "@/components/organisms/projects-search";
 import WithHeroTemplate from "@/components/templates/with-hero";
 

@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
-import Hero from "@/components/atoms/hero";
 import styles from "./index.module.css";
+import Hero from "@/components/atoms/hero";
+import { ReactNode } from "react";
 
 export default function WithHeroTemplate({
 	heroLabel,

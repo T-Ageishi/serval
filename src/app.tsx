@@ -1,9 +1,9 @@
-import { Outlet, Route, Routes } from "react-router";
-import Projects from "@/components/pages/projects";
 import { Home } from "@/components/pages/home";
+import Projects from "@/components/pages/projects";
 import MainTemplate from "@/components/templates/main";
 import { useAppSelector } from "@/redux/hooks/use-app-selector.ts";
 import { selectTheme } from "@/redux/slices/theme-slice.ts";
+import { Outlet, Route, Routes } from "react-router";
 
 export function App() {
 	return (

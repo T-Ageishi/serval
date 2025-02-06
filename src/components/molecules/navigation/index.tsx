@@ -1,9 +1,9 @@
 "use client";
 
-import { ReactNode } from "react";
 import styles from "./index.module.css";
-import { NavLink, useLocation } from "react-router";
 import { clsx } from "clsx";
+import { ReactNode } from "react";
+import { NavLink, useLocation } from "react-router";
 
 const navSetting = [
 	{ label: "Home", href: "/" },

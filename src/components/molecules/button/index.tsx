@@ -1,7 +1,7 @@
-import { ComponentProps } from "react";
-import Icon from "@/components/atoms/icon";
 import styles from "./index.module.css";
+import Icon from "@/components/atoms/icon";
 import { clsx } from "clsx";
+import { ComponentProps } from "react";
 
 export default function Button({ icon, className, ...props }: ButtonProps) {
 	return (

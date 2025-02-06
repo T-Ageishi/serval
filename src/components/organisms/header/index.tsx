@@ -1,11 +1,11 @@
-import { ReactNode } from "react";
-import Navigation from "@/components/molecules/navigation";
-import { NavLink } from "react-router";
-import Button from "@/components/molecules/button";
 import styles from "./index.module.css";
+import Button from "@/components/molecules/button";
+import Navigation from "@/components/molecules/navigation";
 import { useAppSelector } from "@/redux/hooks/use-app-selector.ts";
 import { darken, lighten, selectTheme } from "@/redux/slices/theme-slice.ts";
+import { ReactNode } from "react";
 import { useDispatch } from "react-redux";
+import { NavLink } from "react-router";
 
 export default function Header(): ReactNode {
 	const theme = useAppSelector(selectTheme);

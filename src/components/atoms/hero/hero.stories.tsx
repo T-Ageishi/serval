@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import Hero from "@/components/atoms/hero/index";
+import type { Meta, StoryObj } from "@storybook/react";
 
 export default {
 	title: "Atoms/Hero",

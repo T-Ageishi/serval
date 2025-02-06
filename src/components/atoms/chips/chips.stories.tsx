@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import Chips, { ChipProps } from "@/components/atoms/chips/index";
+import type { Meta, StoryObj } from "@storybook/react";
 import { ChangeEventHandler, useState } from "react";
 
 export default {

@@ -1,7 +1,7 @@
-import { ReactNode } from "react";
 import styles from "./index.module.css";
 import Card from "@/components/atoms/card";
 import Chips from "@/components/atoms/chips";
+import { ReactNode } from "react";
 
 export default function ProjectCard({
 	title,

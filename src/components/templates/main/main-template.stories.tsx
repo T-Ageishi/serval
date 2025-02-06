@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import MainTemplate from "@/components/templates/main/index";
 import { Projects } from "@/components/molecules/navigation/navigation.stories";
+import MainTemplate from "@/components/templates/main/index";
+import type { Meta, StoryObj } from "@storybook/react";
 
 export default {
 	title: "Templates/MainTemplate",

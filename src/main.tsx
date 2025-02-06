@@ -1,10 +1,10 @@
 import "./index.css";
+import { App } from "@/app.tsx";
+import { store } from "@/store.ts";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router";
-import { store } from "@/store.ts";
 import { Provider } from "react-redux";
-import { App } from "@/app.tsx";
+import { BrowserRouter } from "react-router";
 
 createRoot(document.getElementById("root")!).render(
 	<StrictMode>

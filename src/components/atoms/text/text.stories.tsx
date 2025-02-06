@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import Text from "@/components/atoms/text/index";
+import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 import { ChangeEventHandler } from "react";
 

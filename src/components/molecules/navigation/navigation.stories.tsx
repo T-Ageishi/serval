@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import Navigation from ".";
+import type { Meta, StoryObj } from "@storybook/react";
 import { reactRouterParameters } from "storybook-addon-remix-react-router";
 
 export default {

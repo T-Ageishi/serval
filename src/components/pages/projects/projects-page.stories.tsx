@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import ProjectsPage from "@/components/pages/projects/index";
 import { Projects } from "@/components/molecules/navigation/navigation.stories";
+import ProjectsPage from "@/components/pages/projects/index";
+import type { Meta, StoryObj } from "@storybook/react";
 
 export default {
 	title: "Pages/Projects",

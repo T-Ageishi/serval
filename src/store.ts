@@ -1,7 +1,7 @@
-import type { Action, ThunkAction } from "@reduxjs/toolkit";
-import { configureStore } from "@reduxjs/toolkit";
 import SearchReducer from "./redux/slices/search-slice.ts";
 import themeReducer from "@/redux/slices/theme-slice.ts";
+import type { Action, ThunkAction } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 
 export const store = configureStore({
 	reducer: {

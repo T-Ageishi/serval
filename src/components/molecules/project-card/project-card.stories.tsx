@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import ProjectCard from ".";
+import type { Meta, StoryObj } from "@storybook/react";
 
 export default {
 	title: "Molecules/ProjectCard",

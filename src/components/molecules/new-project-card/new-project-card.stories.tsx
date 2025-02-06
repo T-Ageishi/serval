@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import NewProjectCard from "@/components/molecules/new-project-card/index";
+import type { Meta, StoryObj } from "@storybook/react";
 
 export default {
 	title: "Molecules/NewProjectCard",
