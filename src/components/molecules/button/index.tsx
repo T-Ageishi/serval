@@ -9,12 +9,12 @@ export default function Button({ icon, className, ...props }: ButtonProps) {
 			className={clsx([
 				className,
 				styles["button"],
-				styles["button--md"],
+				styles["button--sm"],
 				styles["button--icon"],
 			])}
 			{...props}
 		>
-			<Icon name={icon} size={"lg"} />
+			<Icon name={icon} />
 		</button>
 	);
 }
