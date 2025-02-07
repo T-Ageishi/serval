@@ -17,6 +17,8 @@
   --active-indicator-height: 2px;
 
   &.navigation__item--active {
+    color: rgb(var(--c-primary));
+
     &::after {
       position: absolute;
       z-index: 1;
@@ -31,10 +33,10 @@
   }
 
   &:not(.navigation__item--active) {
-    color: rgb(106 114 130);
+    color: rgb(51 65 85);
 
     &:hover {
-      color: rgb(54 65 83);
+      color: rgb(15 23 42);
 
       &::after {
         position: absolute;
@@ -46,6 +48,26 @@
         content: "";
         user-select: none;
         background-color: rgb(var(--c-outline-variant));
+      }
+    }
+  }
+}
+
+@container style(--theme: 'dark') {
+  .navigation__item {
+    &.navigation__item--active {
+      color: rgb(var(--c-primary));
+    }
+
+    &:not(.navigation__item--active) {
+      color: rgb(148 163 184);
+
+      &:hover {
+        color: rgb(203 213 225);
+
+        &::after {
+          background-color: rgb(203 213 225);
+        }
       }
     }
   }
