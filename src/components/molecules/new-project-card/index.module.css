@@ -4,7 +4,6 @@
   justify-content: center;
   cursor: pointer;
   transition-duration: 200ms;
-  color: var(--color-on-surface);
   border: dashed 2px rgb(209 213 220);
   background-color: var(--color-surface-container-lowest);
 

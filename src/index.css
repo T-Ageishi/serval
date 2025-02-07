@@ -7,8 +7,6 @@ body {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--color-on-surface);
-  background: var(--color-surface-container-lowest);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
