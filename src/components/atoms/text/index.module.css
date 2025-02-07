@@ -9,6 +9,8 @@
   border: none;
   border-radius: 4px;
   outline: 1px solid rgba(var(--c-outline-variant-tint));
+  background-color: rgb(var(--bg-text-box));
+  color: inherit;
 
   &:focus {
     outline: 2px solid rgb(79 57 246);

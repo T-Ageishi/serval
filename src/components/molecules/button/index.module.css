@@ -6,7 +6,7 @@
   border: none;
   outline: none;
   background-color: transparent;
-  color: var(--c-text-base);
+  color: inherit;
 }
 
 .button--sm {
