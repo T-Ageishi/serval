@@ -4,10 +4,10 @@
   justify-content: center;
   cursor: pointer;
   transition-duration: 200ms;
-  border: dashed 2px rgb(209 213 220);
+  outline: dashed 2px rgb(var(--c-outline));
 
   &:hover {
-    border: dashed 2px rgb(153 161 175);
+    outline: dashed 2px rgba(var(--c-outline-variant), 0.75);
   }
 }
 
