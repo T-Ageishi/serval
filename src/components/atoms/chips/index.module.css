@@ -18,8 +18,8 @@
 
 	&:has(.chip__checkbox:checked) {
 		color: #ffffff;
-		border: solid 1px rgb(57 73 171);
-		background-color: rgb(57 73 171);
+		border: solid 1px rgb(var(--c-primary));
+		background-color: rgb(var(--c-primary));
 	}
 }
 
