@@ -1,5 +1,6 @@
 .header {
 	width: 100%;
+	background-color: rgb(var(--bg-surface));
 	border-bottom: solid 1px rgba(var(--c-outline-variant), 0.25);
 }
 

@@ -53,7 +53,8 @@
 /* 色 */
 .light {
 	--theme: 'light';
-	--bg-base: 252, 252, 252;
+	--bg-base: 255, 255, 255;
+	--bg-surface: 252, 252, 252;
 	--bg-text-box: 252, 252, 252;
 	--c-text-base: 16, 24, 40;
 	--c-primary: 97, 95, 255;
@@ -63,8 +64,9 @@
 }
 .dark {
 	--theme: 'dark';
-	--bg-base: 15, 23, 42;
-	--bg-text-box: 51, 65, 85;
+	--bg-base: 18, 18, 18;
+	--bg-surface: 33, 33, 33;
+	--bg-text-box: 33, 33, 33;
 	--c-text-base: 226, 232, 240;
 	--c-primary: 97, 95, 255;
 	--c-outline: 116, 119, 127;
