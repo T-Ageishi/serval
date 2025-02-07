@@ -33,6 +33,14 @@
 		--is-lg: true;
 	}
 
+	/* テーマ */
+	@property --theme {
+		syntax: "light | dark";
+		inherits: true;
+		initial-value: false;
+	}
+	--theme: 'light';
+
 	/* @@todo 定義見なおし */
 	--app-max-width: 1200px;
 	--app-padding: 0 24px;
@@ -44,6 +52,7 @@
 
 /* 色 */
 .light {
+	--theme: 'light';
 	--bg-base: 255, 255, 255;
 	--bg-text-box: 255, 255, 255;
 	--c-text-base: 16, 24, 40;
@@ -53,6 +62,7 @@
 	--c-outline-variant-tint: var(--c-outline-variant), 0.4;
 }
 .dark {
+	--theme: 'dark';
 	--bg-base: 15, 23, 42;
 	--bg-text-box: 51, 65, 85;
 	--c-text-base: 226, 232, 240;

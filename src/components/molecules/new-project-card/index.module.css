@@ -4,10 +4,20 @@
   justify-content: center;
   cursor: pointer;
   transition-duration: 200ms;
-  outline: dashed 2px rgb(var(--c-outline));
+  outline: dashed 2px rgba(var(--c-outline-variant), 0.75);
 
   &:hover {
-    outline: dashed 2px rgba(var(--c-outline-variant), 0.75);
+    outline: dashed 2px rgb(var(--c-outline));
+  }
+}
+
+@container style(--theme: 'dark') {
+  .new-project-card {
+    outline: dashed 2px rgb(var(--c-outline));
+
+    &:hover {
+      outline: dashed 2px rgba(var(--c-outline-variant), 0.75);
+    }
   }
 }
 

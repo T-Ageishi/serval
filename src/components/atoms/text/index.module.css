@@ -8,10 +8,13 @@
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
-  outline: 1px solid rgba(var(--c-outline-variant-tint));
+  outline: 1px solid rgba(var(--c-outline-variant), 0.25);
   background-color: rgb(var(--bg-text-box));
   color: inherit;
 
+  &:hover {
+    outline: 1px solid rgba(var(--c-outline-variant), 0.5);
+  }
   &:focus {
     outline: 2px solid rgb(79 57 246);
   }
