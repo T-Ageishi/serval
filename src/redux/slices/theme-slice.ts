@@ -3,9 +3,13 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const themeSlice = createSlice({
 	name: "theme",
-	initialState: {
-		value: "light",
-	} as ThemeState,
+	initialState: (): ThemeState => {
+		return {
+			value: window.matchMedia("(prefers-color-scheme: dark)").matches
+				? "dark"
+				: "light",
+		};
+	},
 	reducers: {
 		lighten(state) {
 			state.value = "light";
