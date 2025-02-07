@@ -40,11 +40,9 @@
 	/* フォントサイズ */
 	--font-sm: 0.875rem;
 	--font-3xl: 1.875rem;
-
-	/* 色 */
-	--color-surface-container-lowest: rgb(255 255 255);
 }
 
+/* 色 */
 .light {
 	--bg-base: 255, 255, 255;
 	--c-text-base: 16, 24, 40;
@@ -52,7 +50,6 @@
 	--c-outline: 116, 119, 127;
 	--c-outline-variant: 196, 198, 208;
 }
-
 .dark {
 	--c-primary: 97, 95, 255;
 	--c-text-base: 255, 255, 255;
