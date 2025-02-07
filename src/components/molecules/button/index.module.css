@@ -5,11 +5,8 @@
   cursor: pointer;
   border: none;
   outline: none;
-  background: none;
-
-  &:hover {
-    background-color: var(--color-surface);
-  }
+  background-color: transparent;
+  color: var(--c-text-base);
 }
 
 .button--sm {
