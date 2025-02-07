@@ -1,22 +1,25 @@
+/*noinspection CssReplaceWithShorthandSafely*/
 .new-project-card {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition-duration: 200ms;
-  outline: dashed 2px rgba(var(--c-outline-variant), 0.75);
+  outline-style: dashed;
+  outline-width: 2px;
+  outline-color: rgba(var(--c-outline-variant), 0.75);
 
   &:hover {
-    outline: dashed 2px rgb(var(--c-outline));
+    outline-color: rgb(var(--c-outline));
   }
 }
 
 @container style(--theme: 'dark') {
   .new-project-card {
-    outline: dashed 2px rgb(var(--c-outline));
+    outline-color: rgb(var(--c-outline));
 
     &:hover {
-      outline: dashed 2px rgba(var(--c-outline-variant), 0.75);
+      outline-color: rgba(var(--c-outline-variant), 0.75);
     }
   }
 }
