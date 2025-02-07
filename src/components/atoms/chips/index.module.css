@@ -9,7 +9,7 @@
 	display: block;
 	padding: 2px 8px;
 	user-select: none;
-	border: solid 1px var(--color-outline-variant);
+	border: solid 1px rgb(var(--c-outline-variant));
 	border-radius: 4px;
 
 	&:has(.chip__checkbox) {
