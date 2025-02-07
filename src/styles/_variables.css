@@ -49,7 +49,7 @@
 	--c-primary: 97, 95, 255;
 	--c-outline: 116, 119, 127;
 	--c-outline-variant: 196, 198, 208;
-	--c-outline-variant-tint: var(--c-outline-variant), 0.25;
+	--c-outline-variant-tint: var(--c-outline-variant), 0.4;
 }
 .dark {
 	--c-primary: 97, 95, 255;
@@ -57,5 +57,5 @@
 	--bg-base: 15, 23, 42;
 	--c-outline: 116, 119, 127;
 	--c-outline-variant: 248, 250, 252;
-	--c-outline-variant-tint: var(--c-outline-variant), 0.25;
+	--c-outline-variant-tint: var(--c-outline-variant), 0.4;
 }
