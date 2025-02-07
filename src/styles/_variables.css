@@ -57,6 +57,7 @@
 
 .dark {
 	--c-primary: 97, 95, 255;
+	--c-text-base: 255, 255, 255;
 	--bg-base: 15, 23, 42;
 	--c-outline: 116, 119, 127;
 	--c-outline-variant: 248, 250, 252;
