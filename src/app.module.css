@@ -1,4 +1,4 @@
 .app {
   color: rgb(var(--c-text-base));
-  background-color: var(--bg-base);
+  background-color: rgb(var(--bg-base));
 }

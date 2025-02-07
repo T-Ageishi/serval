@@ -48,16 +48,16 @@
 }
 
 .light {
-	--bg-base: rgb(255 255 255);
+	--bg-base: 255, 255, 255;
 	--c-text-base: 16, 24, 40;
-	--c-primary: rgb(97 95 255);
+	--c-primary: 97, 95, 255;
 	--c-outline: 116, 119, 127;
 	--c-outline-variant: 196, 198, 208;
 }
 
 .dark {
-	--c-primary: rgb(97 95 255);
-	--bg-base: rgb(15 23 42);
+	--c-primary: 97, 95, 255;
+	--bg-base: 15, 23, 42;
 	--c-outline: 116, 119, 127;
 	--c-outline-variant: 248, 250, 252;
 }

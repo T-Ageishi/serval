@@ -47,7 +47,7 @@
       height: var(--active-indicator-height);
       content: "";
       user-select: none;
-      background-color: var(--c-primary);
+      background-color: rgb(var(--c-primary));
     }
   }
 }
