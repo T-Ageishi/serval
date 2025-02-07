@@ -7,4 +7,5 @@
   height: 24px;
   padding: 48px;
   color: rgb(153 161 175);
+  border-top: 1px solid rgba(var(--c-outline-variant-tint));
 }
