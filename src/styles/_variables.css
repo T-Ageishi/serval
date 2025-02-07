@@ -95,11 +95,13 @@
 .light {
 	--c-primary: rgb(97 95 255);
 	--bg-base: rgb(255 255 255);
+	--c-outline: 116, 119, 127;
 	--c-outline-variant: 196, 198, 208;
 }
 
 .dark {
 	--c-primary: rgb(97 95 255);
 	--bg-base: rgb(15 23 42);
+	--c-outline: 116, 119, 127;
 	--c-outline-variant: 248, 250, 252;
 }
