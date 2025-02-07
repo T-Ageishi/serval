@@ -10,7 +10,7 @@
   outline-color: rgba(var(--c-outline-variant), 0.75);
 
   &:hover {
-    outline-color: rgb(var(--c-outline));
+    outline-color: rgb(var(--c-outline-variant));
   }
 }
 
