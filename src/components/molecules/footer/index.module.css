@@ -7,5 +7,5 @@
   height: 24px;
   padding: 48px;
   color: rgb(153 161 175);
-  background-color: var(--color-inverse-surface);
+  background-color: var(--bg-base);
 }

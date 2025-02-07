@@ -92,3 +92,13 @@
 	--color-surface-container-high: rgb(231 232 238);
 	--color-surface-container-highest: rgb(226 226 233);
 }
+
+.light {
+	--c-primary: rgb(97 95 255);
+	--bg-base: rgb(255 255 255);
+}
+
+.dark {
+	--c-primary: rgb(97 95 255);
+	--bg-base: rgb(15 23 42);
+}

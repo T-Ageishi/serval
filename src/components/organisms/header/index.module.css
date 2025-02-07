@@ -1,7 +1,7 @@
 .header {
 	width: 100%;
 	border-bottom: solid 1px var(--color-outline-variant);
-	background-color: var(--color-surface-container-lowest);
+	background-color: var(--bg-base);
 }
 
 .logo {

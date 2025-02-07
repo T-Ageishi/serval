@@ -1,3 +1,4 @@
+import styles from "./app.module.css";
 import Home from "@/components/pages/home";
 import Projects from "@/components/pages/projects";
 import MainTemplate from "@/components/templates/main";
@@ -21,7 +22,7 @@ export function App() {
 function AppRoot() {
 	const theme = useAppSelector(selectTheme);
 	return (
-		<div className={`app ${theme}`}>
+		<div className={`${styles["app"]} ${theme}`}>
 			<Outlet />
 		</div>
 	);
