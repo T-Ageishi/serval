@@ -13,5 +13,4 @@
 	max-width: var(--app-max-width);
 	margin: 24px auto 0;
 	padding: 48px;
-	background-color: var(--color-surface-container-lowest);
 }

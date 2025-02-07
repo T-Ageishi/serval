@@ -1,6 +1,5 @@
 .navigation {
   display: flex;
-  background-color: var(--color-surface-container-lowest);
   column-gap: 32px;
 }
 
