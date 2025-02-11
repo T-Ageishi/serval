@@ -2,7 +2,7 @@
   display: grid;
   margin-top: 24px;
   --column-width: 300px;
-  gap: 8px;
+  gap: 16px;
   grid-template-columns: repeat(auto-fill, minmax(var(--column-width), 1fr));
   grid-template-rows: repeat(
 		auto-fill,
