@@ -57,8 +57,8 @@ function formatDate(date: Date): string {
 	return formatter.format(date);
 }
 
-// TODO 型定義を見直す
-type ProjectCardProps = {
+// TODO tagMasterいらない
+export type ProjectCardProps = {
 	title: string;
 	tags: string[];
 	startsAt: number;
