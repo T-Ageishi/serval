@@ -1,3 +1,4 @@
+import { Category } from "@/redux/slices/category-slice.ts";
 import { RootState } from "@/store.ts";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
@@ -96,13 +97,7 @@ export type ProjectsState = {
 export type Project = {
 	id: number;
 	title: string;
-	tags: Tag["id"][];
+	tags: Category["id"][];
 	starts_at: number;
 	ends_at: number;
-};
-
-// @@todo 別ファイルに移動
-type Tag = {
-	id: number;
-	title: string;
 };

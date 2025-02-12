@@ -1,4 +1,5 @@
-import SearchReducer from "./redux/slices/search-slice.ts";
+import searchReducer from "./redux/slices/search-slice.ts";
+import categoryReducer from "@/redux/slices/category-slice.ts";
 import projectsReducer from "@/redux/slices/projects-slice.ts";
 import themeReducer from "@/redux/slices/theme-slice.ts";
 import type { Action, ThunkAction } from "@reduxjs/toolkit";
@@ -6,9 +7,10 @@ import { configureStore } from "@reduxjs/toolkit";
 
 export const store = configureStore({
 	reducer: {
-		search: SearchReducer,
+		search: searchReducer,
 		theme: themeReducer,
 		projects: projectsReducer,
+		category: categoryReducer,
 	},
 });
 
