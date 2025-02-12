@@ -10,3 +10,13 @@
 	);
   grid-auto-rows: calc(var(--column-width) / 1.618);
 }
+
+.page__cards--loading {
+  display: block;
+}
+
+.page__spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

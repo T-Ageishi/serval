@@ -1,4 +1,5 @@
 import styles from "./index.module.css";
+import Spinner from "@/components/atoms/spinner";
 import NewProjectCard from "@/components/molecules/new-project-card";
 import ProjectCard from "@/components/molecules/project-card";
 import ProjectsSearch from "@/components/organisms/projects-search";
@@ -16,6 +17,7 @@ import {
 	selectKeyword,
 } from "@/redux/slices/search-slice.ts";
 import { store } from "@/store.ts";
+import { clsx } from "clsx";
 import { useEffect } from "react";
 
 export default function Projects() {
@@ -34,7 +36,15 @@ export default function Projects() {
 	return (
 		<WithHeroTemplate heroLabel={"プロジェクト一覧"}>
 			<ProjectsSearch />
-			<section className={styles["page__cards"]}>
+			<section
+				className={clsx([
+					styles["page__cards"],
+					{
+						[styles["page__cards--loading"]]:
+							status === "idle" || status === "pending",
+					},
+				])}
+			>
 				{status === "succeeded" ? (
 					<>
 						<NewProjectCard />
@@ -48,7 +58,9 @@ export default function Projects() {
 						{error !== null && <p>{error}</p>}
 					</div>
 				) : (
-					<p>データ取得中...</p>
+					<div className={styles["page__spinner"]}>
+						<Spinner />
+					</div>
 				)}
 			</section>
 		</WithHeroTemplate>
