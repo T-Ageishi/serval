@@ -58,7 +58,7 @@ export const fetchProjects = createAsyncThunk(
 );
 
 const initialState: ProjectsState = {
-	projects: [],
+	items: [],
 	status: "idle",
 	error: null,
 };
@@ -73,7 +73,7 @@ export const projectsSlice = createSlice({
 			})
 			.addCase(fetchProjects.fulfilled, (state, action) => {
 				state.status = "succeeded";
-				state.projects.push(...action.payload);
+				state.items.push(...action.payload);
 			})
 			.addCase(fetchProjects.rejected, (state, action) => {
 				state.status = "failed";
@@ -84,11 +84,11 @@ export const projectsSlice = createSlice({
 
 export default projectsSlice.reducer;
 export const selectStatus = (state: RootState) => state.projects.status;
-export const selectProjects = (state: RootState) => state.projects.projects;
+export const selectProjects = (state: RootState) => state.projects.items;
 export const selectError = (state: RootState) => state.projects.error;
 
 export type ProjectsState = {
-	projects: Project[];
+	items: Project[];
 	status: "idle" | "pending" | "succeeded" | "failed";
 	error: string | null;
 };
