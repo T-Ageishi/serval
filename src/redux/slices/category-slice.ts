@@ -1,7 +1,8 @@
+import { createAppAsyncThunk } from "@/redux/with-types.ts";
 import { RootState } from "@/store.ts";
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
-export const fetchCategories = createAsyncThunk(
+export const fetchCategories = createAppAsyncThunk(
 	"category/fetchCategories",
 	async (): Promise<Category[]> => {
 		//@@todo 実際のデータ取得に置き換える
@@ -18,6 +19,14 @@ export const fetchCategories = createAsyncThunk(
 			{ id: 5, title: "サンプルタグ５" },
 			{ id: 6, title: "サンプルタグ６" },
 		];
+	},
+	{
+		condition(_, thunkApi) {
+			const projectsStatus = selectStatus(thunkApi.getState());
+			if (projectsStatus !== "idle") {
+				return false;
+			}
+		},
 	}
 );
 
