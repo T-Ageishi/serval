@@ -31,6 +31,14 @@ export default function ProjectsSearch() {
 		}
 	}, [categoriesStatus]);
 
+	//カテゴリーの選択状態が変化したときの処理
+	const onChangeChips = (e: ChangeEvent<HTMLInputElement>) => {
+		if (e.currentTarget.checked) {
+			dispatch(addCategory(Number(e.currentTarget.value)));
+		} else {
+			dispatch(removeCategory(Number(e.currentTarget.value)));
+		}
+	};
 	const chipProps: ChipProps[] = categories.map((c) => ({
 		value: c.id,
 		label: c.title,
@@ -51,15 +59,4 @@ export default function ProjectsSearch() {
 			</div>
 		</section>
 	);
-}
-
-/**
- * カテゴリーの選択状態が変化したときの処理
- */
-function onChangeChips(e: ChangeEvent<HTMLInputElement>) {
-	if (e.currentTarget.checked) {
-		addCategory(Number(e.currentTarget.value));
-	} else {
-		removeCategory(Number(e.currentTarget.value));
-	}
 }
