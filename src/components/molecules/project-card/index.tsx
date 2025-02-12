@@ -1,21 +1,36 @@
 import styles from "./index.module.css";
 import Card from "@/components/atoms/card";
 import Chips from "@/components/atoms/chips";
+import {
+	fetchCategories,
+	selectCategories,
+	selectStatus,
+} from "@/redux/slices/category-slice.ts";
+import { store } from "@/store.ts";
 import { ReactNode } from "react";
+import { useSelector } from "react-redux";
 
 export default function ProjectCard({
 	title,
 	tags,
 	startsAt,
 	endsAt,
-	tagMaster,
 }: ProjectCardProps): ReactNode {
+	const status = useSelector(selectStatus);
+	const categories = useSelector(selectCategories);
+
+	if (status === "idle") {
+		store.dispatch(fetchCategories());
+	}
+
 	return (
 		<ProjectCardPresentation
 			title={title}
-			tagTitles={tags.map((tag) => ({
-				label: tagMaster.find((setting) => setting.id === tag)?.title || "",
-			}))}
+			tagTitles={tags
+				.filter((t) => categories.some((c) => c.id === t))
+				.map((t) => ({
+					label: categories.find((setting) => setting.id === t)?.title || "",
+				}))}
 			startsDate={new Date(startsAt)}
 			endsDate={new Date(endsAt)}
 		/>
@@ -38,9 +53,11 @@ function ProjectCardPresentation({
 					{formatDate(startsDate)} ~ {formatDate(endsDate)}
 				</span>
 			</p>
-			<div className={styles["card__chips"]}>
-				<Chips chipPropsList={tagTitles} />
-			</div>
+			{tagTitles.length > 0 && (
+				<div className={styles["card__chips"]}>
+					<Chips chipPropsList={tagTitles} />
+				</div>
+			)}
 		</Card>
 	);
 }
@@ -57,13 +74,11 @@ function formatDate(date: Date): string {
 	return formatter.format(date);
 }
 
-// TODO tagMasterいらない
 export type ProjectCardProps = {
 	title: string;
 	tags: number[];
 	startsAt: number;
 	endsAt: number;
-	tagMaster: { id: number; title: string }[];
 };
 
 type ProjectCardPresentationProps = {

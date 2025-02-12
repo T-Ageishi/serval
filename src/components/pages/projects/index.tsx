@@ -52,14 +52,5 @@ function makeProjectCardProps(project: Project) {
 		tags: project.tags,
 		startsAt: project.starts_at,
 		endsAt: project.ends_at,
-		//@@todo 消す
-		tagMaster: [
-			{ id: 1, title: "サンプルタグ１" },
-			{ id: 2, title: "サンプルタグ２" },
-			{ id: 3, title: "サンプルタグ３" },
-			{ id: 4, title: "サンプルタグ４" },
-			{ id: 5, title: "サンプルタグ５" },
-			{ id: 6, title: "サンプルタグ６" },
-		],
 	};
 }
