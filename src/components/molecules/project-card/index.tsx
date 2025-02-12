@@ -60,10 +60,10 @@ function formatDate(date: Date): string {
 // TODO tagMasterいらない
 export type ProjectCardProps = {
 	title: string;
-	tags: string[];
+	tags: number[];
 	startsAt: number;
 	endsAt: number;
-	tagMaster: { id: string; title: string }[];
+	tagMaster: { id: number; title: string }[];
 };
 
 type ProjectCardPresentationProps = {
