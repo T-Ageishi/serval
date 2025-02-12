@@ -11,6 +11,10 @@ import {
 	selectProjects,
 	selectProjectsStatus,
 } from "@/redux/slices/projects-slice.ts";
+import {
+	selectCategories,
+	selectKeyword,
+} from "@/redux/slices/search-slice.ts";
 import { store } from "@/store.ts";
 import { useEffect } from "react";
 
@@ -18,6 +22,8 @@ export default function Projects() {
 	const status = useAppSelector(selectProjectsStatus);
 	const projects = useAppSelector(selectProjects);
 	const error = useAppSelector(selectProjectsError);
+	const keyword = useAppSelector(selectKeyword);
+	const categories = useAppSelector(selectCategories);
 
 	useEffect(() => {
 		if (status === "idle") {
@@ -32,7 +38,7 @@ export default function Projects() {
 				{status === "succeeded" ? (
 					<>
 						<NewProjectCard />
-						{projects.map((p) => (
+						{projects.filter(createFilter(keyword, categories)).map((p) => (
 							<ProjectCard key={p.id} {...makeProjectCardProps(p)} />
 						))}
 					</>
@@ -47,6 +53,22 @@ export default function Projects() {
 			</section>
 		</WithHeroTemplate>
 	);
+}
+
+function createFilter(keyword: string, categories: Project["tags"]) {
+	return (project: Project): boolean => {
+		let ret = true;
+		if (keyword !== "" && !project.title.includes(keyword)) {
+			ret = false;
+		}
+		if (
+			categories.length > 0 &&
+			!project.tags.some((t) => categories.includes(t))
+		) {
+			ret = false;
+		}
+		return ret;
+	};
 }
 
 function makeProjectCardProps(project: Project) {
