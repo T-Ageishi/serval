@@ -9,7 +9,7 @@ export default function Chips({
 	return (
 		<div className={styles["chips"]}>
 			{chipPropsList.map((props) => (
-				<Chip key={props.value} {...props} />
+				<Chip key={props.value || props.label} {...props} />
 			))}
 		</div>
 	);
