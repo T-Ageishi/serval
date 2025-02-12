@@ -4,7 +4,7 @@ import Chips from "@/components/atoms/chips";
 import {
 	fetchCategories,
 	selectCategories,
-	selectCategoryStatus,
+	selectCategoriesStatus,
 } from "@/redux/slices/category-slice.ts";
 import { store } from "@/store.ts";
 import { ReactNode, useEffect } from "react";
@@ -16,7 +16,7 @@ export default function ProjectCard({
 	startsAt,
 	endsAt,
 }: ProjectCardProps): ReactNode {
-	const status = useSelector(selectCategoryStatus);
+	const status = useSelector(selectCategoriesStatus);
 	const categories = useSelector(selectCategories);
 
 	useEffect(() => {

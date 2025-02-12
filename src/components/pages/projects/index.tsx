@@ -7,17 +7,17 @@ import { useAppSelector } from "@/redux/hooks";
 import {
 	fetchProjects,
 	Project,
-	selectError,
+	selectProjectsError,
 	selectProjects,
-	selectStatus,
+	selectProjectsStatus,
 } from "@/redux/slices/projects-slice.ts";
 import { store } from "@/store.ts";
 import { useEffect } from "react";
 
 export default function Projects() {
-	const status = useAppSelector(selectStatus);
+	const status = useAppSelector(selectProjectsStatus);
 	const projects = useAppSelector(selectProjects);
-	const error = useAppSelector(selectError);
+	const error = useAppSelector(selectProjectsError);
 
 	useEffect(() => {
 		if (status === "idle") {

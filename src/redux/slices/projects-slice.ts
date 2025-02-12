@@ -59,7 +59,7 @@ export const fetchProjects = createAppAsyncThunk(
 	},
 	{
 		condition(_, thunkApi) {
-			const projectsStatus = selectStatus(thunkApi.getState());
+			const projectsStatus = selectProjectsStatus(thunkApi.getState());
 			if (projectsStatus !== "idle") {
 				return false;
 			}
@@ -93,9 +93,9 @@ export const projectsSlice = createSlice({
 });
 
 export default projectsSlice.reducer;
-export const selectStatus = (state: RootState) => state.projects.status;
 export const selectProjects = (state: RootState) => state.projects.items;
-export const selectError = (state: RootState) => state.projects.error;
+export const selectProjectsStatus = (state: RootState) => state.projects.status;
+export const selectProjectsError = (state: RootState) => state.projects.error;
 
 export type ProjectsState = {
 	items: Project[];
