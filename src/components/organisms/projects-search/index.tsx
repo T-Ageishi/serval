@@ -6,27 +6,36 @@ import Text from "@/components/atoms/text";
 import { useAppSelector } from "@/redux/hooks";
 import { useAppDispatch } from "@/redux/hooks";
 import {
+	fetchCategories,
+	selectCategories,
+	selectCategoriesStatus,
+} from "@/redux/slices/category-slice.ts";
+import {
 	selectKeyword,
 	updateKeyword,
 	addCategory,
 	removeCategory,
 } from "@/redux/slices/search-slice.ts";
-import { ChangeEvent, useEffect, useMemo, useState } from "react";
+import { store } from "@/store.ts";
+import { ChangeEvent, useEffect } from "react";
 
 export default function ProjectsSearch() {
-	const [categories, setCategories] = useState<Category[]>([]);
 	const keyword = useAppSelector(selectKeyword);
+	const categories = useAppSelector(selectCategories);
+	const categoriesStatus = useAppSelector(selectCategoriesStatus);
 	const dispatch = useAppDispatch();
 
 	useEffect(() => {
-		// @@todo データ取得
-		setTimeout(() => setCategories([{ value: -99999, label: "その他" }]), 5000);
-		return () => setCategories([]);
-	}, []);
+		if (categoriesStatus === "pending") {
+			store.dispatch(fetchCategories());
+		}
+	}, [categoriesStatus]);
 
-	const chipProps: ChipProps[] = useMemo(() => {
-		return categories.map((c) => ({ ...c, onChange: onChangeChips }));
-	}, [categories]);
+	const chipProps: ChipProps[] = categories.map((c) => ({
+		value: c.id,
+		label: c.title,
+		onChange: onChangeChips,
+	}));
 
 	return (
 		<section>
@@ -54,5 +63,3 @@ function onChangeChips(e: ChangeEvent<HTMLInputElement>) {
 		removeCategory(Number(e.currentTarget.value));
 	}
 }
-
-type Category = { value: number; label: string };
