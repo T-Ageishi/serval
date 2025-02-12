@@ -1,15 +1,15 @@
 import styles from "./index.module.css";
 import Button from "@/components/molecules/button";
 import Navigation from "@/components/molecules/navigation";
-import { useAppSelector } from "@/redux/hooks/use-app-selector.ts";
+import { useAppSelector } from "@/redux/hooks";
+import { useAppDispatch } from "@/redux/hooks";
 import { darken, lighten, selectTheme } from "@/redux/slices/theme-slice.ts";
 import { ReactNode } from "react";
-import { useDispatch } from "react-redux";
 import { NavLink } from "react-router";
 
 export default function Header(): ReactNode {
 	const theme = useAppSelector(selectTheme);
-	const dispatch = useDispatch();
+	const dispatch = useAppDispatch();
 
 	return (
 		<header className={styles["header"]}>

@@ -7,7 +7,7 @@ import {
 	selectStatus,
 } from "@/redux/slices/category-slice.ts";
 import { store } from "@/store.ts";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import { useSelector } from "react-redux";
 
 export default function ProjectCard({
@@ -19,9 +19,11 @@ export default function ProjectCard({
 	const status = useSelector(selectStatus);
 	const categories = useSelector(selectCategories);
 
-	if (status === "idle") {
-		store.dispatch(fetchCategories());
-	}
+	useEffect(() => {
+		if (status === "idle") {
+			store.dispatch(fetchCategories());
+		}
+	}, [status]);
 
 	return (
 		<ProjectCardPresentation

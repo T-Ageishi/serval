@@ -3,7 +3,7 @@ import NewProjectCard from "@/components/molecules/new-project-card";
 import ProjectCard from "@/components/molecules/project-card";
 import ProjectsSearch from "@/components/organisms/projects-search";
 import WithHeroTemplate from "@/components/templates/with-hero";
-import { useAppSelector } from "@/redux/hooks/use-app-selector.ts";
+import { useAppSelector } from "@/redux/hooks";
 import {
 	fetchProjects,
 	Project,
@@ -12,15 +12,18 @@ import {
 	selectStatus,
 } from "@/redux/slices/projects-slice.ts";
 import { store } from "@/store.ts";
+import { useEffect } from "react";
 
 export default function Projects() {
 	const status = useAppSelector(selectStatus);
 	const projects = useAppSelector(selectProjects);
 	const error = useAppSelector(selectError);
 
-	if (status === "idle") {
-		store.dispatch(fetchProjects());
-	}
+	useEffect(() => {
+		if (status === "idle") {
+			store.dispatch(fetchProjects());
+		}
+	}, [status]);
 
 	return (
 		<WithHeroTemplate heroLabel={"プロジェクト一覧"}>

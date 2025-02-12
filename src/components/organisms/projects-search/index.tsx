@@ -3,7 +3,8 @@
 import styles from "./index.module.css";
 import Chips, { ChipProps } from "@/components/atoms/chips";
 import Text from "@/components/atoms/text";
-import { useAppSelector } from "@/redux/hooks/use-app-selector.ts";
+import { useAppSelector } from "@/redux/hooks";
+import { useAppDispatch } from "@/redux/hooks";
 import {
 	selectKeyword,
 	updateKeyword,
@@ -11,12 +12,11 @@ import {
 	removeCategory,
 } from "@/redux/slices/search-slice.ts";
 import { ChangeEvent, useEffect, useMemo, useState } from "react";
-import { useDispatch } from "react-redux";
 
 export default function ProjectsSearch() {
 	const [categories, setCategories] = useState<Category[]>([]);
 	const keyword = useAppSelector(selectKeyword);
-	const dispatch = useDispatch();
+	const dispatch = useAppDispatch();
 
 	useEffect(() => {
 		// @@todo データ取得
