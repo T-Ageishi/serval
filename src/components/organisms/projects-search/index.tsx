@@ -2,6 +2,7 @@
 
 import styles from "./index.module.css";
 import Chips, { ChipProps } from "@/components/atoms/chips";
+import Skeleton from "@/components/atoms/skeleton";
 import Text from "@/components/atoms/text";
 import { useAppSelector } from "@/redux/hooks";
 import { useAppDispatch } from "@/redux/hooks";
@@ -55,7 +56,15 @@ export default function ProjectsSearch() {
 				placeholder={"プロジェクトを検索"}
 			/>
 			<div className={styles["search__chips-container"]}>
-				<Chips chipPropsList={chipProps} />
+				{categoriesStatus === "succeeded" ? (
+					<Chips chipPropsList={chipProps} />
+				) : (
+					<div style={{ display: "flex", gap: "8px" }}>
+						<Skeleton height={25} width={100} />
+						<Skeleton height={25} width={100} />
+						<Skeleton height={25} width={100} />
+					</div>
+				)}
 			</div>
 		</section>
 	);
