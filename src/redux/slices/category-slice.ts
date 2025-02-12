@@ -22,7 +22,7 @@ export const fetchCategories = createAppAsyncThunk(
 	},
 	{
 		condition(_, thunkApi) {
-			const projectsStatus = selectStatus(thunkApi.getState());
+			const projectsStatus = selectCategoryStatus(thunkApi.getState());
 			if (projectsStatus !== "idle") {
 				return false;
 			}
@@ -57,9 +57,9 @@ export const categorySlice = createSlice({
 });
 
 export default categorySlice.reducer;
-export const selectStatus = (state: RootState) => state.category.status;
+export const selectCategoryStatus = (state: RootState) => state.category.status;
 export const selectCategories = (state: RootState) => state.category.items;
-export const selectError = (state: RootState) => state.category.error;
+export const selectCategoryError = (state: RootState) => state.category.error;
 
 export type Category = {
 	id: number;
