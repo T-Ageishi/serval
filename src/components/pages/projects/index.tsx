@@ -4,6 +4,7 @@ import Skeleton from "@/components/atoms/skeleton";
 import NewProjectCard from "@/components/molecules/new-project-card";
 import ProjectCard from "@/components/molecules/project-card";
 import ProjectsSearch from "@/components/organisms/projects-search";
+import Stack from "@/components/templates/stack";
 import { useAppSelector } from "@/redux/hooks";
 import {
 	fetchCategories,
@@ -41,7 +42,7 @@ export default function Projects() {
 	}, [projectsStatus, categoriesStatus]);
 
 	return (
-		<>
+		<Stack>
 			<Hero children={"プロジェクト一覧"} />
 			<ProjectsSearch />
 			<section className={styles["page__cards"]}>
@@ -67,7 +68,7 @@ export default function Projects() {
 					</>
 				)}
 			</section>
-		</>
+		</Stack>
 	);
 }
 
