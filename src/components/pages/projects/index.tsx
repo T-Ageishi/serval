@@ -20,30 +20,30 @@ import { store } from "@/store.ts";
 import { useEffect } from "react";
 
 export default function Projects() {
-	const status = useAppSelector(selectProjectsStatus);
+	const projectsStatus = useAppSelector(selectProjectsStatus);
 	const projects = useAppSelector(selectProjects);
 	const error = useAppSelector(selectProjectsError);
 	const keyword = useAppSelector(selectKeyword);
 	const categories = useAppSelector(selectCategories);
 
 	useEffect(() => {
-		if (status === "idle") {
+		if (projectsStatus === "idle") {
 			store.dispatch(fetchProjects());
 		}
-	}, [status]);
+	}, [projectsStatus]);
 
 	return (
 		<WithHeroTemplate heroLabel={"プロジェクト一覧"}>
 			<ProjectsSearch />
 			<section className={styles["page__cards"]}>
-				{status === "succeeded" ? (
+				{projectsStatus === "succeeded" ? (
 					<>
 						<NewProjectCard />
 						{projects.filter(createFilter(keyword, categories)).map((p) => (
 							<ProjectCard key={p.id} {...makeProjectCardProps(p)} />
 						))}
 					</>
-				) : status === "failed" ? (
+				) : projectsStatus === "failed" ? (
 					<div>
 						<p>データ取得中にエラーが発生しました。</p>
 						{error !== null && <p>{error}</p>}
