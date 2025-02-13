@@ -1,9 +1,9 @@
 import styles from "./index.module.css";
+import Hero from "@/components/atoms/hero";
 import Skeleton from "@/components/atoms/skeleton";
 import NewProjectCard from "@/components/molecules/new-project-card";
 import ProjectCard from "@/components/molecules/project-card";
 import ProjectsSearch from "@/components/organisms/projects-search";
-import WithHeroTemplate from "@/components/templates/with-hero";
 import { useAppSelector } from "@/redux/hooks";
 import {
 	fetchCategories,
@@ -41,7 +41,8 @@ export default function Projects() {
 	}, [projectsStatus, categoriesStatus]);
 
 	return (
-		<WithHeroTemplate heroLabel={"プロジェクト一覧"}>
+		<>
+			<Hero children={"プロジェクト一覧"} />
 			<ProjectsSearch />
 			<section className={styles["page__cards"]}>
 				{projectsStatus === "succeeded" && categoriesStatus === "succeeded" ? (
@@ -66,7 +67,7 @@ export default function Projects() {
 					</>
 				)}
 			</section>
-		</WithHeroTemplate>
+		</>
 	);
 }
 
