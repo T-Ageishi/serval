@@ -7,7 +7,6 @@ import Text from "@/components/atoms/text";
 import { useAppSelector } from "@/redux/hooks";
 import { useAppDispatch } from "@/redux/hooks";
 import {
-	fetchCategories,
 	selectCategories,
 	selectCategoriesStatus,
 } from "@/redux/slices/category-slice.ts";
@@ -17,20 +16,13 @@ import {
 	addCategory,
 	removeCategory,
 } from "@/redux/slices/search-slice.ts";
-import { store } from "@/store.ts";
-import { ChangeEvent, useEffect } from "react";
+import { ChangeEvent } from "react";
 
 export default function ProjectsSearch() {
 	const keyword = useAppSelector(selectKeyword);
 	const categories = useAppSelector(selectCategories);
 	const categoriesStatus = useAppSelector(selectCategoriesStatus);
 	const dispatch = useAppDispatch();
-
-	useEffect(() => {
-		if (categoriesStatus === "pending") {
-			store.dispatch(fetchCategories());
-		}
-	}, [categoriesStatus]);
 
 	//カテゴリーの選択状態が変化したときの処理
 	const onChangeChips = (e: ChangeEvent<HTMLInputElement>) => {

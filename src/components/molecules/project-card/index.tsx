@@ -1,13 +1,8 @@
 import styles from "./index.module.css";
 import Card from "@/components/atoms/card";
 import Chips from "@/components/atoms/chips";
-import {
-	fetchCategories,
-	selectCategories,
-	selectCategoriesStatus,
-} from "@/redux/slices/category-slice.ts";
-import { store } from "@/store.ts";
-import { ReactNode, useEffect } from "react";
+import { selectCategories } from "@/redux/slices/category-slice.ts";
+import { ReactNode } from "react";
 import { useSelector } from "react-redux";
 
 export default function ProjectCard({
@@ -16,14 +11,7 @@ export default function ProjectCard({
 	startsAt,
 	endsAt,
 }: ProjectCardProps): ReactNode {
-	const status = useSelector(selectCategoriesStatus);
 	const categories = useSelector(selectCategories);
-
-	useEffect(() => {
-		if (status === "idle") {
-			store.dispatch(fetchCategories());
-		}
-	}, [status]);
 
 	return (
 		<ProjectCardPresentation

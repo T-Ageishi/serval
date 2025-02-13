@@ -6,6 +6,10 @@ import ProjectsSearch from "@/components/organisms/projects-search";
 import WithHeroTemplate from "@/components/templates/with-hero";
 import { useAppSelector } from "@/redux/hooks";
 import {
+	fetchCategories,
+	selectCategoriesStatus,
+} from "@/redux/slices/category-slice.ts";
+import {
 	fetchProjects,
 	Project,
 	selectProjectsError,
@@ -23,6 +27,7 @@ export default function Projects() {
 	const projectsStatus = useAppSelector(selectProjectsStatus);
 	const projects = useAppSelector(selectProjects);
 	const error = useAppSelector(selectProjectsError);
+	const categoriesStatus = useAppSelector(selectCategoriesStatus);
 	const keyword = useAppSelector(selectKeyword);
 	const categories = useAppSelector(selectCategories);
 
@@ -30,20 +35,23 @@ export default function Projects() {
 		if (projectsStatus === "idle") {
 			store.dispatch(fetchProjects());
 		}
-	}, [projectsStatus]);
+		if (categoriesStatus === "idle") {
+			store.dispatch(fetchCategories());
+		}
+	}, [projectsStatus, categoriesStatus]);
 
 	return (
 		<WithHeroTemplate heroLabel={"プロジェクト一覧"}>
 			<ProjectsSearch />
 			<section className={styles["page__cards"]}>
-				{projectsStatus === "succeeded" ? (
+				{projectsStatus === "succeeded" && categoriesStatus === "succeeded" ? (
 					<>
 						<NewProjectCard />
 						{projects.filter(createFilter(keyword, categories)).map((p) => (
 							<ProjectCard key={p.id} {...makeProjectCardProps(p)} />
 						))}
 					</>
-				) : projectsStatus === "failed" ? (
+				) : projectsStatus === "failed" || categoriesStatus === "failed" ? (
 					<div>
 						<p>データ取得中にエラーが発生しました。</p>
 						{error !== null && <p>{error}</p>}
