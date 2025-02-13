@@ -1,3 +1,4 @@
+import { store } from "@/app/store.ts";
 import Hero from "@/components/atoms/hero";
 import ProjectsList from "@/components/organisms/projects-list";
 import ProjectsSearch from "@/components/organisms/projects-search";
@@ -11,7 +12,6 @@ import {
 	fetchProjects,
 	selectProjectsStatus,
 } from "@/redux/slices/projects-slice.ts";
-import { store } from "@/store.ts";
 import { useEffect } from "react";
 
 export default function Projects() {

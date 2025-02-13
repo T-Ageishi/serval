@@ -1,5 +1,5 @@
+import { RootState } from "@/app/store.ts";
 import { createAppAsyncThunk } from "@/redux/with-types.ts";
-import { RootState } from "@/store.ts";
 import { createSlice } from "@reduxjs/toolkit";
 
 export const fetchCategories = createAppAsyncThunk(

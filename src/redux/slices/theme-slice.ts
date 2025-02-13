@@ -1,4 +1,4 @@
-import { RootState } from "@/store.ts";
+import { RootState } from "@/app/store.ts";
 import { createSlice } from "@reduxjs/toolkit";
 
 export const themeSlice = createSlice({

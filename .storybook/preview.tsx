@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
+import { store } from "@/app/store.ts";
 import "@/index.css";
-import { store } from "@/store.ts";
 import type { Preview } from "@storybook/react";
 import { Provider } from "react-redux";
 import {

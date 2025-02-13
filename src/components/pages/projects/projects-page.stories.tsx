@@ -1,4 +1,4 @@
-import { App } from "@/app.tsx";
+import { App } from "@/app/app.tsx";
 import type { Meta, StoryObj } from "@storybook/react";
 import {
 	reactRouterOutlet,

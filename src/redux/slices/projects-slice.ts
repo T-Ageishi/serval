@@ -1,6 +1,6 @@
+import { RootState } from "@/app/store.ts";
 import { Category } from "@/redux/slices/category-slice.ts";
 import { createAppAsyncThunk } from "@/redux/with-types.ts";
-import { RootState } from "@/store.ts";
 import { createSlice } from "@reduxjs/toolkit";
 
 export const fetchProjects = createAppAsyncThunk(

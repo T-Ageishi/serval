@@ -1,4 +1,4 @@
-import searchReducer from "./redux/slices/search-slice.ts";
+import searchReducer from "../redux/slices/search-slice.ts";
 import categoryReducer from "@/redux/slices/category-slice.ts";
 import projectsReducer from "@/redux/slices/projects-slice.ts";
 import themeReducer from "@/redux/slices/theme-slice.ts";
