@@ -6,7 +6,7 @@ import Text from "@/components/atoms/text";
 import {
 	selectCategories,
 	selectProjectsStatus,
-} from "@/features/projects/ducks";
+} from "@/features/projects/projects-slice";
 import { selectKeyword } from "@/features/search/ducks";
 import {
 	updateKeyword,

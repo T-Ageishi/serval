@@ -4,11 +4,11 @@ import Skeleton from "@/components/atoms/skeleton";
 import NewProjectCard from "@/components/molecules/new-project-card";
 import ProjectCard from "@/components/molecules/project-card";
 import {
-	Project,
 	selectProjects,
 	selectProjectsError,
 	selectProjectsStatus,
-} from "@/features/projects/ducks";
+} from "@/features/projects/projects-slice";
+import { Project } from "@/features/projects/types";
 import { selectCategories, selectKeyword } from "@/features/search/ducks";
 import { clsx } from "clsx";
 

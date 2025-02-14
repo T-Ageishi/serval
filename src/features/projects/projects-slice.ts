@@ -1,6 +1,7 @@
+import { RootState } from "@/app/store.ts";
 import { createAppAsyncThunk } from "@/common/utils/with-types.ts";
-import { selectProjectsStatus } from "@/features/projects/ducks/selectors.ts";
-import { ProjectsDataSet } from "@/features/projects/ducks/types.ts";
+import { ProjectsDataSet, ProjectsState } from "@/features/projects/types.ts";
+import { createSlice } from "@reduxjs/toolkit";
 
 export const fetchDataSet = createAppAsyncThunk(
 	"projects/fetchDataSet",
@@ -75,3 +76,37 @@ export const fetchDataSet = createAppAsyncThunk(
 		},
 	}
 );
+
+const initialState: ProjectsState = {
+	projects: [],
+	categories: [],
+	status: "idle",
+	error: null,
+};
+const projectsSlice = createSlice({
+	name: "projects",
+	initialState,
+	reducers: {},
+	extraReducers: (builder) => {
+		builder
+			.addCase(fetchDataSet.pending, (state) => {
+				state.status = "pending";
+			})
+			.addCase(fetchDataSet.fulfilled, (state, action) => {
+				state.status = "succeeded";
+				state.projects.push(...action.payload.projects);
+				state.categories.push(...action.payload.categories);
+			})
+			.addCase(fetchDataSet.rejected, (state, action) => {
+				state.status = "failed";
+				state.error = action.error.message ?? "Unknown Error";
+			});
+	},
+});
+
+export const selectProjects = (state: RootState) => state.projects.projects;
+export const selectCategories = (state: RootState) => state.projects.categories;
+export const selectProjectsStatus = (state: RootState) => state.projects.status;
+export const selectProjectsError = (state: RootState) => state.projects.error;
+
+export default projectsSlice.reducer;
