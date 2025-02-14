@@ -1,3 +1,3 @@
-import { slice } from "@/features/theme/ducks/theme-slice.ts";
+import { slice } from "@/features/theme/ducks/slice.ts";
 
 export const { lighten, darken } = slice.actions;

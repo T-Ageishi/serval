@@ -1,4 +1,4 @@
-import themeReducer from "./theme-slice.ts";
+import themeReducer from "./slice.ts";
 
 export default themeReducer;
 export * from "./types.ts";
