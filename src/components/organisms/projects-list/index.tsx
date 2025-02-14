@@ -3,11 +3,11 @@ import Skeleton from "@/components/atoms/skeleton";
 import NewProjectCard from "@/components/molecules/new-project-card";
 import ProjectCard from "@/components/molecules/project-card";
 import {
+	Project,
 	selectProjects,
 	selectProjectsError,
 	selectProjectsStatus,
 } from "@/features/projects";
-import { Project } from "@/features/projects/slice.ts";
 import { useAppSelector } from "@/redux/hooks";
 import {
 	selectCategoriesError,

@@ -1,5 +1,5 @@
 import { selectProjectsStatus } from "@/features/projects/selectors.ts";
-import { Category } from "@/redux/slices/category-slice.ts";
+import { Project, ProjectsState } from "@/features/projects/types.ts";
 import { createAppAsyncThunk } from "@/redux/with-types.ts";
 import { createSlice } from "@reduxjs/toolkit";
 
@@ -93,17 +93,3 @@ export const slice = createSlice({
 });
 
 export default slice.reducer;
-
-export type ProjectsState = {
-	items: Project[];
-	status: "idle" | "pending" | "succeeded" | "failed";
-	error: string | null;
-};
-
-export type Project = {
-	id: number;
-	title: string;
-	tags: Category["id"][];
-	starts_at: number;
-	ends_at: number;
-};
