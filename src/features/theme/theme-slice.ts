@@ -1,3 +1,4 @@
+import { reducers } from "@/features/theme/reducers.ts";
 import { ThemeState } from "@/features/theme/types.ts";
 import { createSlice } from "@reduxjs/toolkit";
 
@@ -10,14 +11,7 @@ export const slice = createSlice({
 				: "light",
 		};
 	},
-	reducers: {
-		lighten(state) {
-			state.value = "light";
-		},
-		darken(state) {
-			state.value = "dark";
-		},
-	},
+	reducers,
 });
 
 export default slice.reducer;
