@@ -1,7 +1,7 @@
 import { RootState } from "@/app/store.ts";
 import { createSlice } from "@reduxjs/toolkit";
 
-export type ThemeState = {
+type ThemeState = {
 	value: "light" | "dark";
 };
 
