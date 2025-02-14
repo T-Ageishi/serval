@@ -1,4 +1,4 @@
-import { RootState } from "@/app/store.ts";
+import { selectProjectsStatus } from "@/features/projects/selectors.ts";
 import { Category } from "@/redux/slices/category-slice.ts";
 import { createAppAsyncThunk } from "@/redux/with-types.ts";
 import { createSlice } from "@reduxjs/toolkit";
@@ -72,7 +72,7 @@ const initialState: ProjectsState = {
 	status: "idle",
 	error: null,
 };
-export const projectsSlice = createSlice({
+export const slice = createSlice({
 	name: "projects",
 	initialState,
 	reducers: {},
@@ -92,10 +92,7 @@ export const projectsSlice = createSlice({
 	},
 });
 
-export default projectsSlice.reducer;
-export const selectProjects = (state: RootState) => state.projects.items;
-export const selectProjectsStatus = (state: RootState) => state.projects.status;
-export const selectProjectsError = (state: RootState) => state.projects.error;
+export default slice.reducer;
 
 export type ProjectsState = {
 	items: Project[];

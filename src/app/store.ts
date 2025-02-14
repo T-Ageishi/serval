@@ -1,6 +1,6 @@
 import searchReducer from "../redux/slices/search-slice.ts";
+import projectsReducer from "@/features/projects/slice.ts";
 import categoryReducer from "@/redux/slices/category-slice.ts";
-import projectsReducer from "@/redux/slices/projects-slice.ts";
 import themeReducer from "@/redux/slices/theme-slice.ts";
 import type { Action, ThunkAction } from "@reduxjs/toolkit";
 import { configureStore } from "@reduxjs/toolkit";

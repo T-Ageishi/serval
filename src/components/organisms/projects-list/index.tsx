@@ -2,17 +2,17 @@ import styles from "./index.module.css";
 import Skeleton from "@/components/atoms/skeleton";
 import NewProjectCard from "@/components/molecules/new-project-card";
 import ProjectCard from "@/components/molecules/project-card";
+import {
+	selectProjects,
+	selectProjectsError,
+	selectProjectsStatus,
+} from "@/features/projects";
+import { Project } from "@/features/projects/slice.ts";
 import { useAppSelector } from "@/redux/hooks";
 import {
 	selectCategoriesError,
 	selectCategoriesStatus,
 } from "@/redux/slices/category-slice.ts";
-import {
-	Project,
-	selectProjects,
-	selectProjectsError,
-	selectProjectsStatus,
-} from "@/redux/slices/projects-slice.ts";
 import {
 	selectCategories,
 	selectKeyword,
