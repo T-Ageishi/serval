@@ -7,7 +7,7 @@ const initialState: ProjectsState = {
 	status: "idle",
 	error: null,
 };
-export const slice = createSlice({
+const slice = createSlice({
 	name: "projects",
 	initialState,
 	reducers: {},
