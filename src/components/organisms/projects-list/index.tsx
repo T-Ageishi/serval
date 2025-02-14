@@ -4,7 +4,6 @@ import NewProjectCard from "@/components/molecules/new-project-card";
 import ProjectCard from "@/components/molecules/project-card";
 import {
 	Project,
-	selectCategoriesError,
 	selectProjects,
 	selectProjectsError,
 	selectProjectsStatus,
@@ -21,7 +20,6 @@ export default function ProjectsList() {
 	const projects = useAppSelector(selectProjects);
 	const projectsError = useAppSelector(selectProjectsError);
 	const categoriesStatus = useAppSelector(selectProjectsStatus);
-	const categoriesError = useAppSelector(selectCategoriesError);
 
 	//検索条件
 	const keyword = useAppSelector(selectKeyword);
@@ -45,7 +43,6 @@ export default function ProjectsList() {
 			<section className={clsx([styles["list"], styles["list--error"]])}>
 				<p>データ取得中にエラーが発生しました。</p>
 				{projectsError !== null && <p>{projectsError}</p>}
-				{categoriesError !== null && <p>{categoriesError}</p>}
 			</section>
 		);
 	}
