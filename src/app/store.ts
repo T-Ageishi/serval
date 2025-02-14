@@ -1,6 +1,6 @@
 import searchReducer from "../features/search/ducks";
 import projectsReducer from "@/features/projects/projects-slice";
-import themeReducer from "@/features/theme/ducks";
+import themeReducer from "@/features/theme/theme-slice";
 import type { Action, ThunkAction } from "@reduxjs/toolkit";
 import { configureStore } from "@reduxjs/toolkit";
 
