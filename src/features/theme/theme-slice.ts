@@ -1,7 +1,7 @@
 import { ThemeState } from "@/features/theme/types.ts";
 import { createSlice } from "@reduxjs/toolkit";
 
-export const themeSlice = createSlice({
+export const slice = createSlice({
 	name: "theme",
 	initialState: (): ThemeState => {
 		return {
@@ -20,5 +20,5 @@ export const themeSlice = createSlice({
 	},
 });
 
-export const { lighten, darken } = themeSlice.actions;
-export default themeSlice.reducer;
+export const { lighten, darken } = slice.actions;
+export default slice.reducer;
