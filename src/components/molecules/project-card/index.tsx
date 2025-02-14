@@ -1,7 +1,7 @@
 import styles from "./index.module.css";
 import Card from "@/components/atoms/card";
 import Chips from "@/components/atoms/chips";
-import { selectCategories } from "@/features/projects/ducks";
+import { selectCategories } from "@/features/projects/projects-slice";
 import { ReactNode } from "react";
 import { useSelector } from "react-redux";
 
