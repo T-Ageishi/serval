@@ -9,7 +9,7 @@ import {
 	selectProjectsError,
 	selectProjectsStatus,
 } from "@/features/projects/ducks";
-import { selectCategories, selectKeyword } from "@/features/search";
+import { selectCategories, selectKeyword } from "@/features/search/ducks";
 import { clsx } from "clsx";
 
 export default function ProjectsList() {

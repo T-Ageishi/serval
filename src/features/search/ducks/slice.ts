@@ -1,5 +1,5 @@
-import { reducers } from "@/features/search/reducers.ts";
-import { SearchState } from "@/features/search/types.ts";
+import { reducers } from "@/features/search/ducks/reducers.ts";
+import { SearchState } from "@/features/search/ducks/types.ts";
 import { createSlice } from "@reduxjs/toolkit";
 
 /**

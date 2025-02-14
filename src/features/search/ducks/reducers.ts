@@ -1,4 +1,4 @@
-import { Reducers } from "@/features/search/types.ts";
+import { Reducers } from "@/features/search/ducks/types.ts";
 
 export const reducers: Reducers = {
 	updateKeyword: (state, action) => {
