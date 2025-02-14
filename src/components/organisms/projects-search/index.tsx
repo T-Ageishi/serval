@@ -3,14 +3,14 @@ import Chips, { ChipProps } from "@/components/atoms/chips";
 import Skeleton from "@/components/atoms/skeleton";
 import Text from "@/components/atoms/text";
 import { selectCategories, selectProjectsStatus } from "@/features/projects";
-import { useAppSelector } from "@/redux/hooks";
-import { useAppDispatch } from "@/redux/hooks";
 import {
 	selectKeyword,
 	updateKeyword,
 	addCategory,
 	removeCategory,
-} from "@/redux/slices/search-slice.ts";
+} from "@/features/search/slice.ts";
+import { useAppSelector } from "@/redux/hooks";
+import { useAppDispatch } from "@/redux/hooks";
 import { ChangeEvent } from "react";
 
 export default function ProjectsSearch() {

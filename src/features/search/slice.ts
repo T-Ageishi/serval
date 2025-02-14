@@ -9,7 +9,7 @@ const initialState: SearchState = {
 	keyword: "",
 	categories: [],
 };
-export const searchSlice = createSlice({
+export const slice = createSlice({
 	name: "search",
 	initialState,
 	reducers: {
@@ -24,13 +24,12 @@ export const searchSlice = createSlice({
 		},
 	},
 });
-export const { updateKeyword, addCategory, removeCategory } =
-	searchSlice.actions;
+export const { updateKeyword, addCategory, removeCategory } = slice.actions;
 
 export const selectKeyword = (state: RootState) => state.search.keyword;
 export const selectCategories = (state: RootState) => state.search.categories;
 
-export default searchSlice.reducer;
+export default slice.reducer;
 
 export interface SearchState {
 	keyword: string;
