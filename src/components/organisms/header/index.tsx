@@ -1,9 +1,9 @@
 import styles from "./index.module.css";
 import Button from "@/components/molecules/button";
 import Navigation from "@/components/molecules/navigation";
+import { darken, lighten, selectTheme } from "@/features/theme/theme-slice.ts";
 import { useAppSelector } from "@/redux/hooks";
 import { useAppDispatch } from "@/redux/hooks";
-import { darken, lighten, selectTheme } from "@/redux/slices/theme-slice.ts";
 import { ReactNode } from "react";
 import { NavLink } from "react-router";
 
