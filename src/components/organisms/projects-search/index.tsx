@@ -4,11 +4,7 @@ import Skeleton from "@/components/atoms/skeleton";
 import Text from "@/components/atoms/text";
 import { selectCategories, selectProjectsStatus } from "@/features/projects";
 import { selectKeyword } from "@/features/search";
-import {
-	updateKeyword,
-	addCategory,
-	removeCategory,
-} from "@/features/search/slice.ts";
+import { updateKeyword, addCategory, removeCategory } from "@/features/search";
 import { useAppSelector } from "@/redux/hooks";
 import { useAppDispatch } from "@/redux/hooks";
 import { ChangeEvent } from "react";
