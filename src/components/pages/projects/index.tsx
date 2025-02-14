@@ -3,8 +3,7 @@ import Hero from "@/components/atoms/hero";
 import ProjectsList from "@/components/organisms/projects-list";
 import ProjectsSearch from "@/components/organisms/projects-search";
 import Stack from "@/components/templates/stack";
-import { fetchProjects } from "@/features/projects";
-import { selectProjectsStatus } from "@/features/projects/selectors.ts";
+import { fetchProjects, selectProjectsStatus } from "@/features/projects";
 import { useAppSelector } from "@/redux/hooks";
 import {
 	fetchCategories,
