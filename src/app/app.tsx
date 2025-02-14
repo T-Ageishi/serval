@@ -2,7 +2,7 @@ import styles from "./app.module.css";
 import Home from "@/components/pages/home";
 import Projects from "@/components/pages/projects";
 import MainTemplate from "@/components/templates/main";
-import { selectTheme } from "@/features/theme/theme-slice.ts";
+import { selectTheme } from "@/features/theme/";
 import { useAppSelector } from "@/redux/hooks";
 import { Outlet, Route, Routes } from "react-router";
 
