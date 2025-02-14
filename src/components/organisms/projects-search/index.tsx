@@ -4,7 +4,7 @@ import styles from "./index.module.css";
 import Chips, { ChipProps } from "@/components/atoms/chips";
 import Skeleton from "@/components/atoms/skeleton";
 import Text from "@/components/atoms/text";
-import { selectCategories, selectCategoriesStatus } from "@/features/projects";
+import { selectCategories, selectProjectsStatus } from "@/features/projects";
 import { useAppSelector } from "@/redux/hooks";
 import { useAppDispatch } from "@/redux/hooks";
 import {
@@ -18,7 +18,7 @@ import { ChangeEvent } from "react";
 export default function ProjectsSearch() {
 	const keyword = useAppSelector(selectKeyword);
 	const categories = useAppSelector(selectCategories);
-	const categoriesStatus = useAppSelector(selectCategoriesStatus);
+	const categoriesStatus = useAppSelector(selectProjectsStatus);
 	const dispatch = useAppDispatch();
 
 	//カテゴリーの選択状態が変化したときの処理

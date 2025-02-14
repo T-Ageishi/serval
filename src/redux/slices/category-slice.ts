@@ -1,4 +1,4 @@
-import { selectCategoriesStatus } from "@/features/projects";
+import { selectProjectsStatus } from "@/features/projects";
 import { createAppAsyncThunk } from "@/redux/with-types.ts";
 import { createSlice } from "@reduxjs/toolkit";
 
@@ -22,7 +22,7 @@ export const fetchCategories = createAppAsyncThunk(
 	},
 	{
 		condition(_, thunkApi) {
-			const projectsStatus = selectCategoriesStatus(thunkApi.getState());
+			const projectsStatus = selectProjectsStatus(thunkApi.getState());
 			if (projectsStatus !== "idle") {
 				return false;
 			}

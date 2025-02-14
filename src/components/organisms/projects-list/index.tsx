@@ -5,7 +5,6 @@ import ProjectCard from "@/components/molecules/project-card";
 import {
 	Project,
 	selectCategoriesError,
-	selectCategoriesStatus,
 	selectProjects,
 	selectProjectsError,
 	selectProjectsStatus,
@@ -21,7 +20,7 @@ export default function ProjectsList() {
 	const projectsStatus = useAppSelector(selectProjectsStatus);
 	const projects = useAppSelector(selectProjects);
 	const projectsError = useAppSelector(selectProjectsError);
-	const categoriesStatus = useAppSelector(selectCategoriesStatus);
+	const categoriesStatus = useAppSelector(selectProjectsStatus);
 	const categoriesError = useAppSelector(selectCategoriesError);
 
 	//検索条件
