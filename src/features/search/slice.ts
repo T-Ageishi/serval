@@ -1,4 +1,3 @@
-import { RootState } from "@/app/store.ts";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 /**
@@ -25,9 +24,6 @@ export const slice = createSlice({
 	},
 });
 export const { updateKeyword, addCategory, removeCategory } = slice.actions;
-
-export const selectKeyword = (state: RootState) => state.search.keyword;
-export const selectCategories = (state: RootState) => state.search.categories;
 
 export default slice.reducer;
 

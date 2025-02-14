@@ -3,8 +3,8 @@ import Chips, { ChipProps } from "@/components/atoms/chips";
 import Skeleton from "@/components/atoms/skeleton";
 import Text from "@/components/atoms/text";
 import { selectCategories, selectProjectsStatus } from "@/features/projects";
+import { selectKeyword } from "@/features/search";
 import {
-	selectKeyword,
 	updateKeyword,
 	addCategory,
 	removeCategory,

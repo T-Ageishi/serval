@@ -8,7 +8,7 @@ import {
 	selectProjectsError,
 	selectProjectsStatus,
 } from "@/features/projects";
-import { selectCategories, selectKeyword } from "@/features/search/slice.ts";
+import { selectCategories, selectKeyword } from "@/features/search";
 import { useAppSelector } from "@/redux/hooks";
 import { clsx } from "clsx";
 
