@@ -1,6 +1,6 @@
-import ProjectsReducer from "./slice.ts";
+import projectsReducer from "./slice.ts";
 
-export default ProjectsReducer;
+export default projectsReducer;
 export * from "./types.ts";
 export * from "./selectors.ts";
 export * from "./operations.ts";
