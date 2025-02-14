@@ -3,7 +3,7 @@ import { ProjectsState } from "@/features/projects/types.ts";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState: ProjectsState = {
-	items: [],
+	projects: [],
 	status: "idle",
 	error: null,
 };
@@ -18,7 +18,7 @@ const slice = createSlice({
 			})
 			.addCase(fetchProjects.fulfilled, (state, action) => {
 				state.status = "succeeded";
-				state.items.push(...action.payload);
+				state.projects.push(...action.payload);
 			})
 			.addCase(fetchProjects.rejected, (state, action) => {
 				state.status = "failed";

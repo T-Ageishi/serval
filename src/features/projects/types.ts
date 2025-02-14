@@ -1,5 +1,5 @@
 export type ProjectsState = {
-	items: Project[];
+	projects: Project[];
 	categories?: Category[]; //@@todo ?外す
 	status: "idle" | "pending" | "succeeded" | "failed";
 	error: string | null;
