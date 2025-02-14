@@ -2,7 +2,7 @@ import styles from "./index.module.css";
 import Button from "@/components/molecules/button";
 import Navigation from "@/components/molecules/navigation";
 import { selectTheme } from "@/features/theme";
-import { darken, lighten } from "@/features/theme/theme-slice.ts";
+import { darken, lighten } from "@/features/theme";
 import { useAppSelector } from "@/redux/hooks";
 import { useAppDispatch } from "@/redux/hooks";
 import { ReactNode } from "react";
