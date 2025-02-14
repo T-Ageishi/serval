@@ -1,6 +1,6 @@
+import { createAppAsyncThunk } from "@/common/utils/with-types.ts";
 import { selectProjectsStatus } from "@/features/projects/selectors.ts";
 import { ProjectsDataSet } from "@/features/projects/types.ts";
-import { createAppAsyncThunk } from "@/redux/with-types.ts";
 
 export const fetchDataSet = createAppAsyncThunk(
 	"projects/fetchDataSet",
