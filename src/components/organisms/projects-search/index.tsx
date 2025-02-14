@@ -3,7 +3,10 @@ import { useAppDispatch, useAppSelector } from "@/common/hooks/redux.ts";
 import Chips, { ChipProps } from "@/components/atoms/chips";
 import Skeleton from "@/components/atoms/skeleton";
 import Text from "@/components/atoms/text";
-import { selectCategories, selectProjectsStatus } from "@/features/projects";
+import {
+	selectCategories,
+	selectProjectsStatus,
+} from "@/features/projects/ducks";
 import { selectKeyword } from "@/features/search";
 import { updateKeyword, addCategory, removeCategory } from "@/features/search";
 import { ChangeEvent } from "react";

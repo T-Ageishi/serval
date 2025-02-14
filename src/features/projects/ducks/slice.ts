@@ -1,5 +1,5 @@
-import { fetchDataSet } from "@/features/projects/operations.ts";
-import { ProjectsState } from "@/features/projects/types.ts";
+import { fetchDataSet } from "@/features/projects/ducks/operations.ts";
+import { ProjectsState } from "@/features/projects/ducks/types.ts";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState: ProjectsState = {

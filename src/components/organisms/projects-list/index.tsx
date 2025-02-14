@@ -8,7 +8,7 @@ import {
 	selectProjects,
 	selectProjectsError,
 	selectProjectsStatus,
-} from "@/features/projects";
+} from "@/features/projects/ducks";
 import { selectCategories, selectKeyword } from "@/features/search";
 import { clsx } from "clsx";
 

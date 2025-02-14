@@ -1,6 +1,6 @@
 import { createAppAsyncThunk } from "@/common/utils/with-types.ts";
-import { selectProjectsStatus } from "@/features/projects/selectors.ts";
-import { ProjectsDataSet } from "@/features/projects/types.ts";
+import { selectProjectsStatus } from "@/features/projects/ducks/selectors.ts";
+import { ProjectsDataSet } from "@/features/projects/ducks/types.ts";
 
 export const fetchDataSet = createAppAsyncThunk(
 	"projects/fetchDataSet",
