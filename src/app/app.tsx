@@ -3,7 +3,7 @@ import { useAppSelector } from "@/common/hooks/redux.ts";
 import Home from "@/components/pages/home";
 import Projects from "@/components/pages/projects";
 import MainTemplate from "@/components/templates/main";
-import { selectTheme } from "@/features/theme/";
+import { selectTheme } from "@/features/theme/ducks";
 import { Outlet, Route, Routes } from "react-router";
 
 export function App() {

@@ -1,4 +1,4 @@
-import { Reducers } from "@/features/theme/types.ts";
+import { Reducers } from "@/features/theme/ducks/types.ts";
 
 export const reducers: Reducers = {
 	lighten(state) {
