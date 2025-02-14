@@ -3,7 +3,7 @@ import Hero from "@/components/atoms/hero";
 import ProjectsList from "@/components/organisms/projects-list";
 import ProjectsSearch from "@/components/organisms/projects-search";
 import Stack from "@/components/templates/stack";
-import { fetchProjects, selectProjectsStatus } from "@/features/projects";
+import { fetchDataSet, selectProjectsStatus } from "@/features/projects";
 import { useAppSelector } from "@/redux/hooks";
 import {
 	fetchCategories,
@@ -17,7 +17,7 @@ export default function Projects() {
 
 	useEffect(() => {
 		if (projectsStatus === "idle") {
-			store.dispatch(fetchProjects());
+			store.dispatch(fetchDataSet());
 		}
 		if (categoriesStatus === "idle") {
 			store.dispatch(fetchCategories());

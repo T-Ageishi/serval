@@ -1,4 +1,4 @@
-import { fetchProjects } from "@/features/projects/operations.ts";
+import { fetchDataSet } from "@/features/projects/operations.ts";
 import { ProjectsState } from "@/features/projects/types.ts";
 import { createSlice } from "@reduxjs/toolkit";
 
@@ -13,14 +13,14 @@ const slice = createSlice({
 	reducers: {},
 	extraReducers: (builder) => {
 		builder
-			.addCase(fetchProjects.pending, (state) => {
+			.addCase(fetchDataSet.pending, (state) => {
 				state.status = "pending";
 			})
-			.addCase(fetchProjects.fulfilled, (state, action) => {
+			.addCase(fetchDataSet.fulfilled, (state, action) => {
 				state.status = "succeeded";
-				state.projects.push(...action.payload);
+				state.projects.push(...action.payload.projects);
 			})
-			.addCase(fetchProjects.rejected, (state, action) => {
+			.addCase(fetchDataSet.rejected, (state, action) => {
 				state.status = "failed";
 				state.error = action.error.message ?? "Unknown Error";
 			});

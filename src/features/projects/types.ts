@@ -5,6 +5,11 @@ export type ProjectsState = {
 	error: string | null;
 };
 
+export type ProjectsDataSet = {
+	projects: Project[];
+	categories: Category[];
+};
+
 export type Project = {
 	id: number;
 	title: string;
