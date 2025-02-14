@@ -4,15 +4,13 @@ import NewProjectCard from "@/components/molecules/new-project-card";
 import ProjectCard from "@/components/molecules/project-card";
 import {
 	Project,
+	selectCategoriesError,
+	selectCategoriesStatus,
 	selectProjects,
 	selectProjectsError,
 	selectProjectsStatus,
 } from "@/features/projects";
 import { useAppSelector } from "@/redux/hooks";
-import {
-	selectCategoriesError,
-	selectCategoriesStatus,
-} from "@/redux/slices/category-slice.ts";
 import {
 	selectCategories,
 	selectKeyword,

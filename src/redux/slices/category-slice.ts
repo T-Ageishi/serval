@@ -1,4 +1,4 @@
-import { RootState } from "@/app/store.ts";
+import { selectCategoriesStatus } from "@/features/projects";
 import { createAppAsyncThunk } from "@/redux/with-types.ts";
 import { createSlice } from "@reduxjs/toolkit";
 
@@ -57,10 +57,6 @@ export const categorySlice = createSlice({
 });
 
 export default categorySlice.reducer;
-export const selectCategories = (state: RootState) => state.category.items;
-export const selectCategoriesStatus = (state: RootState) =>
-	state.category.status;
-export const selectCategoriesError = (state: RootState) => state.category.error;
 
 export type Category = {
 	id: number;

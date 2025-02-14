@@ -4,12 +4,9 @@ import styles from "./index.module.css";
 import Chips, { ChipProps } from "@/components/atoms/chips";
 import Skeleton from "@/components/atoms/skeleton";
 import Text from "@/components/atoms/text";
+import { selectCategories, selectCategoriesStatus } from "@/features/projects";
 import { useAppSelector } from "@/redux/hooks";
 import { useAppDispatch } from "@/redux/hooks";
-import {
-	selectCategories,
-	selectCategoriesStatus,
-} from "@/redux/slices/category-slice.ts";
 import {
 	selectKeyword,
 	updateKeyword,

@@ -3,12 +3,13 @@ import Hero from "@/components/atoms/hero";
 import ProjectsList from "@/components/organisms/projects-list";
 import ProjectsSearch from "@/components/organisms/projects-search";
 import Stack from "@/components/templates/stack";
-import { fetchDataSet, selectProjectsStatus } from "@/features/projects";
-import { useAppSelector } from "@/redux/hooks";
 import {
-	fetchCategories,
+	fetchDataSet,
 	selectCategoriesStatus,
-} from "@/redux/slices/category-slice.ts";
+	selectProjectsStatus,
+} from "@/features/projects";
+import { useAppSelector } from "@/redux/hooks";
+import { fetchCategories } from "@/redux/slices/category-slice.ts";
 import { useEffect } from "react";
 
 export default function Projects() {
