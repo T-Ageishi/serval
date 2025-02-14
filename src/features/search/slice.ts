@@ -1,9 +1,9 @@
+import { SearchState } from "@/features/search/types.ts";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 /**
  * 検索条件
  */
-
 const initialState: SearchState = {
 	keyword: "",
 	categories: [],
@@ -23,11 +23,6 @@ const slice = createSlice({
 		},
 	},
 });
+
 export const { updateKeyword, addCategory, removeCategory } = slice.actions;
-
 export default slice.reducer;
-
-export interface SearchState {
-	keyword: string;
-	categories: number[];
-}
