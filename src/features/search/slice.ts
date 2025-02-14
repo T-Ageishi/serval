@@ -8,7 +8,7 @@ const initialState: SearchState = {
 	keyword: "",
 	categories: [],
 };
-export const slice = createSlice({
+const slice = createSlice({
 	name: "search",
 	initialState,
 	reducers: {
