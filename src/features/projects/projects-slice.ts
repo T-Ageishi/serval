@@ -1,7 +1,19 @@
 import { RootState } from "@/app/store.ts";
 import { createAppAsyncThunk } from "@/common/utils/with-types.ts";
-import { ProjectsDataSet, ProjectsState } from "@/features/projects/types.ts";
+import { Category, Project } from "@/features/projects/types.ts";
 import { createSlice } from "@reduxjs/toolkit";
+
+export type ProjectsState = {
+	projects: Project[];
+	categories: Category[];
+	status: "idle" | "pending" | "succeeded" | "failed";
+	error: string | null;
+};
+
+export type ProjectsDataSet = {
+	projects: Project[];
+	categories: Category[];
+};
 
 export const fetchDataSet = createAppAsyncThunk(
 	"projects/fetchDataSet",
