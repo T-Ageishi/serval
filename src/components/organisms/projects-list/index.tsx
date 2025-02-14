@@ -1,4 +1,5 @@
 import styles from "./index.module.css";
+import { useAppSelector } from "@/common/hooks/redux.ts";
 import Skeleton from "@/components/atoms/skeleton";
 import NewProjectCard from "@/components/molecules/new-project-card";
 import ProjectCard from "@/components/molecules/project-card";
@@ -9,7 +10,6 @@ import {
 	selectProjectsStatus,
 } from "@/features/projects";
 import { selectCategories, selectKeyword } from "@/features/search";
-import { useAppSelector } from "@/redux/hooks";
 import { clsx } from "clsx";
 
 export default function ProjectsList() {

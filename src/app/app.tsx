@@ -1,9 +1,9 @@
 import styles from "./app.module.css";
+import { useAppSelector } from "@/common/hooks/redux.ts";
 import Home from "@/components/pages/home";
 import Projects from "@/components/pages/projects";
 import MainTemplate from "@/components/templates/main";
 import { selectTheme } from "@/features/theme/";
-import { useAppSelector } from "@/redux/hooks";
 import { Outlet, Route, Routes } from "react-router";
 
 export function App() {
