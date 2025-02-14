@@ -1,5 +1,3 @@
-"use client";
-
 import styles from "./index.module.css";
 import Chips, { ChipProps } from "@/components/atoms/chips";
 import Skeleton from "@/components/atoms/skeleton";
