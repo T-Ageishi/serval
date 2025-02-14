@@ -4,6 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState: ProjectsState = {
 	projects: [],
+	categories: [],
 	status: "idle",
 	error: null,
 };
@@ -19,6 +20,7 @@ const slice = createSlice({
 			.addCase(fetchDataSet.fulfilled, (state, action) => {
 				state.status = "succeeded";
 				state.projects.push(...action.payload.projects);
+				state.categories.push(...action.payload.categories);
 			})
 			.addCase(fetchDataSet.rejected, (state, action) => {
 				state.status = "failed";

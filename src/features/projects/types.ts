@@ -1,6 +1,6 @@
 export type ProjectsState = {
 	projects: Project[];
-	categories?: Category[]; //@@todo ?外す
+	categories: Category[];
 	status: "idle" | "pending" | "succeeded" | "failed";
 	error: string | null;
 };
