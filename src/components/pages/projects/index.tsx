@@ -1,5 +1,4 @@
-import { store } from "@/app/store.ts";
-import { useAppSelector } from "@/common/hooks/redux.ts";
+import { useAppDispatch, useAppSelector } from "@/common/hooks/redux.ts";
 import Hero from "@/components/atoms/hero";
 import ProjectsList from "@/components/organisms/projects-list";
 import ProjectsSearch from "@/components/organisms/projects-search";
@@ -12,12 +11,13 @@ import { useEffect } from "react";
 
 export default function Projects() {
 	const projectsStatus = useAppSelector(selectProjectsStatus);
+	const dispatch = useAppDispatch();
 
 	useEffect(() => {
 		if (projectsStatus === "idle") {
-			store.dispatch(fetchDataSet());
+			dispatch(fetchDataSet());
 		}
-	}, [projectsStatus]);
+	}, [dispatch, projectsStatus]);
 
 	return (
 		<Stack>
