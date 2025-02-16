@@ -7,12 +7,12 @@ import {
 	selectCategories,
 	selectProjectsStatus,
 } from "@/features/projects/projects-slice";
-import { selectKeyword } from "@/features/search/ducks";
 import {
+	selectKeyword,
 	updateKeyword,
 	addCategory,
 	removeCategory,
-} from "@/features/search/ducks";
+} from "@/features/search/projects-search-slice";
 import { ChangeEvent } from "react";
 
 export default function ProjectsSearch() {

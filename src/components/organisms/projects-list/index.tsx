@@ -9,7 +9,10 @@ import {
 	selectProjectsStatus,
 } from "@/features/projects/projects-slice";
 import { Project } from "@/features/projects/types";
-import { selectCategories, selectKeyword } from "@/features/search/ducks";
+import {
+	selectCategories,
+	selectKeyword,
+} from "@/features/search/projects-search-slice";
 import { clsx } from "clsx";
 
 export default function ProjectsList() {
