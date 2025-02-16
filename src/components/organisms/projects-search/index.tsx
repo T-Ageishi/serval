@@ -4,15 +4,15 @@ import Chips, { ChipProps } from "@/components/atoms/chips";
 import Skeleton from "@/components/atoms/skeleton";
 import Text from "@/components/atoms/text";
 import {
-	selectCategories,
-	selectProjectsStatus,
-} from "@/features/projects/projects-slice";
-import {
 	selectKeyword,
 	updateKeyword,
 	addCategory,
 	removeCategory,
-} from "@/features/search/projects-search-slice";
+} from "@/features/projects-search/projects-search-slice";
+import {
+	selectCategories,
+	selectProjectsStatus,
+} from "@/features/projects/projects-slice";
 import { ChangeEvent } from "react";
 
 export default function ProjectsSearch() {

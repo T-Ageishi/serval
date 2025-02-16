@@ -1,5 +1,5 @@
 import { RootState } from "@/app/store.ts";
-import { SearchState } from "@/features/search/types.ts";
+import { SearchState } from "@/features/projects-search/types.ts";
 import { createSlice } from "@reduxjs/toolkit";
 
 /**

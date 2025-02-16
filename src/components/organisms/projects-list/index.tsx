@@ -4,15 +4,15 @@ import Skeleton from "@/components/atoms/skeleton";
 import NewProjectCard from "@/components/molecules/new-project-card";
 import ProjectCard from "@/components/molecules/project-card";
 import {
+	selectCategories,
+	selectKeyword,
+} from "@/features/projects-search/projects-search-slice";
+import {
 	selectProjects,
 	selectProjectsError,
 	selectProjectsStatus,
 } from "@/features/projects/projects-slice";
 import { Project } from "@/features/projects/types";
-import {
-	selectCategories,
-	selectKeyword,
-} from "@/features/search/projects-search-slice";
 import { clsx } from "clsx";
 
 export default function ProjectsList() {
